@@ -1,1 +1,1 @@
-{"version":3,"sources":["../SASS/App.scss"],"names":[],"mappings":"AAAA,KACI,iBAAA","file":"App.css"}
+{"version":3,"sources":["../SASS/App.scss","../SASS/_partial.scss"],"names":[],"mappings":"AAEA,KACI,iBAAA,CAEA,WACI,aCNC","file":"App.css"}

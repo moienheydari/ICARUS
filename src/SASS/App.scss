@@ -1,3 +1,9 @@
+@import 'partial';
+
 .App {
     text-align: center;
+
+    .text {
+        color: $Color1;
+    }
 }
