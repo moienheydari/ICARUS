@@ -4,7 +4,7 @@ import '../css/XXXXX.css';
 export default function XXXXX() {
 
     return (
-        <>
-        </>
+        <div>
+        </div>
     )
 }
