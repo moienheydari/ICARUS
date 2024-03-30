@@ -9,7 +9,7 @@ export default function Projects() {
 
     return (
         <div className='projects'>
-            <div className='expl'>
+            <p className='expl'>
                 Our PROJECTS :
                 1. ACC: Design and Construction of a Competition UAV
 
@@ -18,7 +18,7 @@ export default function Projects() {
                 3. DART: Design and Construction of a Rocket Model with Solid Propellant
 
                 4. IT: Dealing with the Electronic and IT part of the projects, the Communication and Design Area of the Team in internal management and communication, and Taking Care of Social Media.
-            </div>
+            </p>
 
             <div className='gallerycontainer'>
                 <div className='box box-1' style={{ '--img': `url(${myImage1})` }} data-text="ACC"></div>

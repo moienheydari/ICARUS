@@ -1,1 +1,1 @@
-.App{text-align:center}.App .text{color:#1d0c59}/*# sourceMappingURL=App.css.map */
+.App{position:relative;display:flex;justify-content:center;align-items:center}.App p{font-family:"Times New Roman",Times,serif;font-size:clamp(18px,2vw,26px)}/*# sourceMappingURL=App.css.map */
