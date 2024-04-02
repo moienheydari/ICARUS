@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../css/Home.css';
 import Logo from '../Logo.jsx';
-import NavBar from '../NavBar.jsx';
+import NavBarHome from '../NavBarHome.jsx';
 import Introduce from '../Introduce.jsx';
 import Projects from '../Projects.jsx';
 import ContactUS from '../ContactUS';
@@ -12,7 +12,7 @@ export default function Home() {
         <div className='home'>
             <div className='header'>
                 <Logo />
-                <NavBar />
+                <NavBarHome />
             </div>
             <Introduce />
             <Projects />

@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/Logo.css';
-import myImage from '../Assests/ICARUS_LOGO_BLACK.png';
+import myImage from '../Assets/ICARUS_LOGO_WHITE.png';
 
 export default function Logo() {
 
