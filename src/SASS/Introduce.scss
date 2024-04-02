@@ -1,12 +1,27 @@
 .introduce {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 90%;
-
-    
     margin-bottom: 50px;
     margin-top: 80px;
+
+    .title1 {
+        text-align: center;
+        font-size: clamp(35px, 5vw, 85px);
+    }
 
     .mid {
         display: flex;
         gap: 50px;
+
+        .texts {
+            .title2 {
+                text-align: center;
+                font-size: clamp(24px, 3vw, 35px);
+            }
+
+
+        }
     }
 }
