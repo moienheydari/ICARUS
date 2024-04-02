@@ -1,3 +1,98 @@
+@import 'partial';
+
 .contactus {
-    width: 90%;
+    width: 100%;
+    margin-bottom: 150px;
+
+
+    .title {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .expl {
+        padding: 20px 5% 25px 5%;
+        border-top: 1px $Color5 solid;
+        border-bottom: 1px $Color5 solid;
+    }
+
+    .card {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: fit-content;
+        height: fit-content;
+        background-color: rgba(238, 238, 238, 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 25px 25px;
+        gap: 20px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+    }
+
+    .socialSvg {
+        width: 30px;
+    }
+
+    /* for all social containers*/
+    .socialContainer {
+        width: 60px;
+        height: 60px;
+        background-color: rgb(44, 44, 44);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transition-duration: .3s;
+    }
+
+    /* instagram*/
+    .containerOne:hover {
+        background-color: #d62976;
+        transition-duration: .3s;
+    }
+
+    /* facebook*/
+    .containerTwo:hover {
+        background-color: #2935d6;
+        transition-duration: .3s;
+    }
+
+    /* linkdin*/
+    .containerThree:hover {
+        background-color: #0072b1;
+        transition-duration: .3s;
+    }
+
+    /* youtube*/
+    .containerFour:hover {
+        background-color: #d70d0d;
+        transition-duration: .3s;
+    }
+
+    .socialContainer:active {
+        transform: scale(0.9);
+        transition-duration: .3s;
+    }
+
+    .socialSvg path {
+        fill: rgb(255, 255, 255);
+    }
+
+    .socialContainer:hover .socialSvg {
+        animation: slide-in-top 0.3s both;
+    }
+
+    @keyframes slide-in-top {
+        0% {
+            transform: translateY(-50px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
 }

@@ -8,7 +8,7 @@ import myImage4 from '../Assets/PictureFour.png';
 export default function Projects() {
 
     return (
-        <div className='projects'>
+        <div className='projects' id='projects'>
             <p className='expl'>
                 Our PROJECTS :
                 1. ACC: Design and Construction of a Competition UAV
@@ -20,7 +20,7 @@ export default function Projects() {
                 4. IT: Dealing with the Electronic and IT part of the projects, the Communication and Design Area of the Team in internal management and communication, and Taking Care of Social Media.
             </p>
 
-            <div className='gallerycontainer' id='projects'>
+            <div className='gallerycontainer' >
                 <div className='box box-1' style={{ '--img': `url(${myImage1})` }} data-text="ACC"></div>
                 <div className='box box-2' style={{ '--img': `url(${myImage2})` }} data-text="DART"></div>
                 <div className='box box-3' style={{ '--img': `url(${myImage3})` }} data-text="RA"></div>
