@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import '../css/HorizontalGallery.css';
-import myImage1 from '../Assests/PictureOne.png';
-import myImage2 from '../Assests/PictureTwo.png';
-import myImage3 from '../Assests/PictureThree.png';
-import myImage4 from '../Assests/PictureFour.png';
-import myImage5 from '../Assests/PictureFive.png';
+import myImage1 from '../Assets/PictureOne.png';
+import myImage2 from '../Assets/PictureTwo.png';
+import myImage3 from '../Assets/PictureThree.png';
+import myImage4 from '../Assets/PictureFour.png';
+import myImage5 from '../Assets/PictureFive.png';
 
 export default function HorizontalGallery() {
     const height = 150;

@@ -1,9 +1,9 @@
 import React from 'react';
 import '../css/Projects.css';
-import myImage1 from '../Assests/PictureOne.png';
-import myImage2 from '../Assests/PictureTwo.png';
-import myImage3 from '../Assests/PictureThree.png';
-import myImage4 from '../Assests/PictureFour.png';
+import myImage1 from '../Assets/PictureOne.png';
+import myImage2 from '../Assets/PictureTwo.png';
+import myImage3 from '../Assets/PictureThree.png';
+import myImage4 from '../Assets/PictureFour.png';
 
 export default function Projects() {
 
