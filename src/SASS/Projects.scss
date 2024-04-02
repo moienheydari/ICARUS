@@ -6,9 +6,16 @@
     align-items: center;
     width: 90%;
     
-    
     .expl {
+        position: relative;
         margin-bottom: 30px;
+        line-height: clamp(30px, 3vw, 45px);
+
+        .title {
+            width: 100%;
+            text-align: center;
+            font-size: clamp(24px, 3vw, 35px);
+        }
     }
     
     .gallerycontainer {

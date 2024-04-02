@@ -10,14 +10,15 @@ export default function Projects() {
     return (
         <div className='projects' id='projects'>
             <p className='expl'>
-                Our PROJECTS :
-                1. ACC: Design and Construction of a Competition UAV
-
-                2. RA: Design and Construction of a Solar-Powered UAV
-
-                3. DART: Design and Construction of a Rocket Model with Solid Propellant
-
-                4. IT: Dealing with the Electronic and IT part of the projects, the Communication and Design Area of the Team in internal management and communication, and Taking Care of Social Media.
+                <p className='title'>Our PROJECTS :</p>
+                <br/>
+                1. ACC: &nbsp;&nbsp;Design and Construction of a Competition UAV
+                <br/>
+                2. RA: &nbsp;&nbsp; Design and Construction of a Solar-Powered UAV
+                <br/>
+                3. DART: &nbsp;&nbsp;Design and Construction of a Rocket Model with Solid Propellant
+                <br/>
+                4. IT: &nbsp;&nbsp;Dealing with the Electronic and IT part of the projects, the Communication and Design Area of the Team in internal management and communication, and Taking Care of Social Media.
             </p>
 
             <div className='gallerycontainer' >
