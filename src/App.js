@@ -3,6 +3,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './Components/Pages/Home/Home';
 import Videofile from './Assets/BackgroundVideo.mp4'
+import ACC from './Components/Pages/Projects/ACC';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       </div>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/ACC' element={<ACC />} />
       </Routes>
     </div>
   );
