@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/Introduce.css';
+import '../../../css/Introduce.css';
 import HorizontalGallery from './HorizontalGallery';
 
 export default function Introduce() {

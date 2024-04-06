@@ -1,9 +1,9 @@
 import React from 'react';
-import '../css/Projects.css';
-import myImage1 from '../Assets/PictureOne.png';
-import myImage2 from '../Assets/PictureTwo.png';
-import myImage3 from '../Assets/PictureThree.png';
-import myImage4 from '../Assets/PictureFour.png';
+import '../../../css/Projects.css';
+import myImage1 from '../../../Assets/PictureOne.png';
+import myImage2 from '../../../Assets/PictureTwo.png';
+import myImage3 from '../../../Assets/PictureThree.png';
+import myImage4 from '../../../Assets/PictureFour.png';
 
 export default function Projects() {
 
@@ -24,10 +24,10 @@ export default function Projects() {
             </div>
 
             <div className='gallerycontainer' >
-                <div className='box box-1' style={{ background: `url(${myImage1}) center center` }} data-text="ACC"></div>
-                <div className='box box-2' style={{ background: `url(${myImage2}) center center` }} data-text="DART"></div>
-                <div className='box box-3' style={{ background: `url(${myImage3}) center center` }} data-text="RA"></div>
-                <div className='box box-4' style={{ background: `url(${myImage4}) center center` }} data-text="IT"></div>
+                <div className='box box-1' style={{ backgroundImage: `url(${myImage1})` }} data-text="ACC"></div>
+                <div className='box box-2' style={{ backgroundImage: `url(${myImage2})` }} data-text="DART"></div>
+                <div className='box box-3' style={{ backgroundImage: `url(${myImage3})` }} data-text="RA"></div>
+                <div className='box box-4' style={{ backgroundImage: `url(${myImage4})` }} data-text="IT"></div>
             </div>
         </div>
     )

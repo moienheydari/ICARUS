@@ -36,7 +36,11 @@
     
     .box {
         position: relative;
+
+        background-position: center center; 
         background-size: cover;
+        background-repeat: no-repeat;
+
         transition: all 400ms;
         display: flex;
         justify-content: center;

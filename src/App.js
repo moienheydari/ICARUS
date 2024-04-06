@@ -1,7 +1,7 @@
 import './css/App.css';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Home from './Components/Pages/Home';
+import Home from './Components/Pages/Home/Home';
 import Videofile from './Assets/BackgroundVideo.mp4'
 
 export default function App() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/NavBarHome.css';
+import '../../../css/NavBarHome.css';
 
 export default function NavBarHome() {
     function handleClickProjects() {
