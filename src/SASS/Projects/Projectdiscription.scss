@@ -1,0 +1,70 @@
+@import '../partial';
+
+.projectdiscription {
+    margin-top: 75px;
+    margin-bottom: 100px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding-top: 20px;
+
+    .left {
+        height: 370px;
+        margin-right: 70px;
+        padding: 10px;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 5px;
+
+        .topic {
+            transition: all 0.300s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0 10px 10px 0;
+            background: rgba(255, 255, 255, 0.7);
+            -webkit-backdrop-filter: blur(0.75px);
+            backdrop-filter: blur(0.75px);
+            border: 0.5px solid rgba(0, 0, 0, 0.2);
+
+            p {
+                font-size: clamp(16px, 2.2vw, 30px);
+                font-weight: 800;
+                color: $Color2;
+                text-align: center;
+            }
+
+        }
+
+        .show {
+            transform: translateX(25px);
+
+            p {
+                color: $Color3;
+            }
+        }
+    }
+
+    .right {
+        transition: all 0.300s;
+        height: 700px;
+        overflow: auto;
+        padding-right: 25px;
+    }
+
+    .right::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    .right::-webkit-scrollbar-track {
+        background: #eeeeee90;
+    }
+
+    .right::-webkit-scrollbar-thumb {
+        background: #440000;
+    }
+
+    .right::-webkit-scrollbar-thumb:hover {
+        background: #ff0000;
+    }
+}
