@@ -4,6 +4,8 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './Components/Pages/Home/Home';
 import Videofile from './Assets/BackgroundVideo.mp4'
 import ACC from './Components/Pages/Projects/ACC';
+import Dart from './Components/Pages/Projects/Dart';
+import RA from './Components/Pages/Projects/RA';
 
 export default function App() {
   return (
@@ -15,7 +17,9 @@ export default function App() {
       </div>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/ACC' element={<ACC />} />
+        <Route path='/ACC-Project' element={<ACC />} />
+        <Route path='/Dart-Project' element={<Dart />} />
+        <Route path='/RA-Project' element={<RA />} />
       </Routes>
     </div>
   );

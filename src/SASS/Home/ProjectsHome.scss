@@ -1,6 +1,6 @@
 @import '../partial';
 
-.projects {
+.projectshome {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,6 +35,7 @@
     }
     
     .box {
+        cursor: pointer;
         position: relative;
         background-position: center center; 
         background-size: cover;
