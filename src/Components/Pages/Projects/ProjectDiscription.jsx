@@ -33,7 +33,6 @@ export default function ProjectDiscription() {
     useEffect(() => {
         console.log(scrollTop);
         if (wwdnum.current <= scrollTop && scrollTop < goalsnum.current) {
-            console.log('HERE!!');
             setTopic('wwd');
         } else {
             if (goalsnum.current <= scrollTop && scrollTop < fleetnum.current) {
