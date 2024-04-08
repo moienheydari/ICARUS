@@ -9,7 +9,7 @@ import ContactUS from '../../ContactUS.jsx';
 export default function Home() {
 
     return (
-        <div className='home'>
+        <div className='home' id='home'>
             <div className='header'>
                 <Logo />
                 <NavBarHome />

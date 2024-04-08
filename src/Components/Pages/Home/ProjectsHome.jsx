@@ -10,7 +10,11 @@ export default function ProjectsHome() {
     const navigate = useNavigate();
 
     let handleClickAcc = () => {
-        navigate('/Acc');
+        let targetSection = document.getElementById('home');
+        targetSection.scrollIntoView({ behavior: 'auto' });
+        setTimeout(() => {
+            navigate('/Acc');
+        }, 0);
     }
 
 
