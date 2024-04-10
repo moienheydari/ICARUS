@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import '../../../css/HorizontalGallery.css';
-import myImage1 from '../../../Assets/PictureOne.png';
-import myImage2 from '../../../Assets/PictureTwo.png';
-import myImage3 from '../../../Assets/PictureThree.png';
-import myImage4 from '../../../Assets/PictureFour.png';
-import myImage5 from '../../../Assets/PictureFive.png';
+import myImage1 from '../../../Assets/Home/Gallery_01.jpg';
+import myImage2 from '../../../Assets/Home/Gallery_02.jpg';
+import myImage3 from '../../../Assets/Home/Gallery_03.jpg';
+import myImage4 from '../../../Assets/Home/Gallery_04.jpg';
+import myImage5 from '../../../Assets/Home/Gallery_05.jpg';
 
 export default function HorizontalGallery() {
-    const height = 150;
-    const delay = 2000;
+    const height = 275;
+    const delay = 2500;
     const [slides, setSlides] = useState([[0 * height, 0], [1 * height, 1], [2 * height, 1], [3 * height, 1], [4 * height, 0]]);
 
     useEffect(() => {

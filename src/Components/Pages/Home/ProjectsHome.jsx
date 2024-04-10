@@ -1,9 +1,9 @@
 import React from 'react';
 import '../../../css/ProjectsHome.css';
-import myImage1 from '../../../Assets/PictureOne.png';
-import myImage2 from '../../../Assets/PictureTwo.png';
-import myImage3 from '../../../Assets/PictureThree.png';
-import myImage4 from '../../../Assets/PictureFour.png';
+import myImage1 from '../../../Assets/ACC/ACC_Profile_1.jpg';
+import myImage2 from '../../../Assets/Dart/DART_Profile_1.jpg';
+import myImage3 from '../../../Assets/RA/RA_Profile_01.jpg';
+import myImage4 from '../../../Assets/IT/IT_Profile_01.png';
 import { useNavigate } from 'react-router-dom'; 
 
 export default function ProjectsHome() {
