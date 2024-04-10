@@ -53,11 +53,14 @@
         transition: all 0.300s;
         height: 900px;
         overflow: auto;
-        padding-right: 5px;
+        padding-right: 180px;
+        padding-left: 180px;
 
         .subject {
-            margin-bottom: 60px;
+            margin-bottom: 100px;
             padding-top: 10px;
+            padding-bottom: 30px;
+            border-bottom: 1px $Color5 solid;
 
             .title {
                 text-align: center;
