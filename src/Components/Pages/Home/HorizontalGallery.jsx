@@ -8,7 +8,7 @@ import myImage5 from '../../../Assets/Home/Gallery_05.jpg';
 
 export default function HorizontalGallery() {
     const height = 275;
-    const delay = 2500;
+    const delay = 2750;
     const [slides, setSlides] = useState([[0 * height, 0], [1 * height, 1], [2 * height, 1], [3 * height, 1], [4 * height, 0]]);
 
     useEffect(() => {

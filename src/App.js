@@ -10,11 +10,11 @@ import RA from './Components/Pages/Projects/RA';
 export default function App() {
   return (
     <div className="App">
-      <div className="background-video">
+      {/* <div className="background-video">
         <video autoPlay loop muted>
           <source src={Videofile} type="video/mp4" />
         </video>
-      </div>
+      </div> */}
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/ACC-Project' element={<ACC />} />
