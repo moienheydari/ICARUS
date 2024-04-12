@@ -9,7 +9,7 @@ import RA from './Components/Pages/Projects/RA';
 
 export default function App() {
   return (
-    <div className="App">
+    <div className="App" id='app'>
       {/* <div className="background-video">
         <video autoPlay loop muted>
           <source src={Videofile} type="video/mp4" />

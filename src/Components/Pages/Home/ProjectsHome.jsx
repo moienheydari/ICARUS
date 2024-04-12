@@ -4,19 +4,9 @@ import myImage1 from '../../../Assets/ACC/ACC_Profile_1.jpg';
 import myImage2 from '../../../Assets/Dart/DART_Profile_1.jpg';
 import myImage3 from '../../../Assets/RA/RA_Profile_01.jpg';
 import myImage4 from '../../../Assets/IT/IT_Profile_01.png';
-import { useNavigate } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 
 export default function ProjectsHome() {
-    const navigate = useNavigate();
-
-
-    let navigateToNewPage = (address) => {
-        let targetSection = document.getElementById('home');
-        targetSection.scrollIntoView({ behavior: 'auto' });
-        setTimeout(() => {
-            navigate(address);
-        }, 0);
-    }
 
     return (
         <div className='projectshome' id='projects'>
@@ -35,10 +25,10 @@ export default function ProjectsHome() {
             </div>
 
             <div className='gallerycontainer' >
-                <div onClick={()=> {navigateToNewPage('/ACC-Project')}} className='box box-1' style={{ backgroundImage: `url(${myImage1})` }} data-text="ACC"></div>
-                <div onClick={()=> {navigateToNewPage('/Dart-Project')}} className='box box-2' style={{ backgroundImage: `url(${myImage2})` }} data-text="DART"></div>
-                <div onClick={()=> {navigateToNewPage('/RA-Project')}} className='box box-3' style={{ backgroundImage: `url(${myImage3})` }} data-text="RA"></div>
-                <div className='box box-4' style={{ backgroundImage: `url(${myImage4})` }} data-text="IT"></div>
+                <Link to="/ACC-Project" className='box box-1' style={{ backgroundImage: `url(${myImage1})` }} data-text="ACC"></Link>
+                <Link to="/Dart-Project" className='box box-2' style={{ backgroundImage: `url(${myImage2})` }} data-text="DART"></Link>
+                <Link to="/RA-Project" className='box box-3' style={{ backgroundImage: `url(${myImage3})` }} data-text="RA"></Link>
+                <Link to="/" className='box box-4' style={{ backgroundImage: `url(${myImage4})` }} data-text="IT"></Link>
             </div>
         </div>
     )

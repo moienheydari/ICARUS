@@ -3,84 +3,62 @@ import '../../../css/Projectdiscription.css';
 
 export default function ProjectDiscription() {
     const [topic, setTopic] = useState('disc');
-    const [offset, setOffset] = useState(0);
     const [scrollTop, setScrollTop] = useState(0);
     const changing = useRef(false);
-    const wwdnum = useRef();
-    const goalsnum = useRef();
-    const fleetnum = useRef();
+    const wwdel = useRef();
+    const goalsel = useRef();
+    const fleetel = useRef();
 
-    ////////////// Scrolling to the "offset"
-    useEffect(() => {
-        const container = document.getElementById('right');
-        container.scrollTop = offset;
-    }, [offset]);
 
-    ////////////// Setting nums and interval
     useEffect(() => {
-        wwdnum.current = Math.floor(document.getElementById('wwd').offsetTop - document.getElementById('right').offsetTop);
-        goalsnum.current = Math.floor(document.getElementById('goals').offsetTop - document.getElementById('right').offsetTop);
-        fleetnum.current = Math.floor(document.getElementById('fleet').offsetTop - document.getElementById('right').offsetTop);
-        const container = document.getElementById('right');
-        const intervalId = setInterval(() => {
-            if (!changing.current) {
-                setScrollTop(container.scrollTop);
+        ////////////// When Opened with <Link>
+        window.scrollTo(0, 0);
+
+        ////////////// Setting element positions 
+        wwdel.current = Math.floor(document.getElementById('wwd').offsetTop - document.getElementById('projects').offsetTop) - 25;
+        goalsel.current = Math.floor(document.getElementById('goals').offsetTop - document.getElementById('projects').offsetTop) - 25;
+        fleetel.current = Math.floor(document.getElementById('fleet').offsetTop - document.getElementById('projects').offsetTop) - 25;
+        ////////////// Setting scrollbar eventlistener
+        let isThrottled = false;
+        const scrollHandler = () => {
+            if (!isThrottled && !changing.current) {
+                setScrollTop(window.scrollY);
+                isThrottled = true;
+                setTimeout(() => {
+                    isThrottled = false;
+                }, 100);
             }
-        }, 100);
-        return () => clearInterval(intervalId);
+        };
+        window.addEventListener('scroll', scrollHandler);
+        return () => window.removeEventListener('scroll', scrollHandler);
     }, []);
 
     ////////////// Checking scroll position
     useEffect(() => {
-        if (wwdnum.current <= scrollTop && scrollTop < goalsnum.current) {
-            setTopic('wwd');
-        } else {
-            if (goalsnum.current <= scrollTop && scrollTop < fleetnum.current) {
-                setTopic('goals');
+            if (wwdel.current <= scrollTop && scrollTop < goalsel.current) {
+                setTopic('wwd');
             } else {
-                if (fleetnum.current <= scrollTop) {
-                    setTopic('fleet');
+                if (goalsel.current <= scrollTop && scrollTop < fleetel.current) {
+                    setTopic('goals');
                 } else {
-                    setTopic('disc');
+                    if (fleetel.current <= scrollTop) {
+                        setTopic('fleet');
+                    } else {
+                        setTopic('disc');
+                    }
                 }
             }
-        }
-    }, [scrollTop])
+    }, [scrollTop, changing]);
 
     function handleClickTopic(name) {
         changing.current = true;
         setTopic(name);
-        scrollToGoal(name);
-    }
-
-    function scrollToGoal(name) {
-        const container = document.getElementById('right');
-        const paragraph = document.getElementById(name);
-        const goal = Math.floor(paragraph.offsetTop - container.offsetTop);
-        const now = Math.floor(container.scrollTop);
-        const interval = goal - now;
-        const time = 400;  //////////////////////////////////////////// TIME HERE ///////
-        increment(interval, now, (time / interval));
-    }
-
-    function increment(interval, now, tempo) {
-        const coefficient = 20; /////////////////////////////////////// COEFFICIENT HERE ///////
-        if (Math.abs(interval) > coefficient) {
-            let newNow = now + (coefficient * (interval / Math.abs(interval)));
-            setOffset(newNow);
-            let intervalNew = (Math.abs(interval) - coefficient) * (interval / Math.abs(interval));
-            setTimeout(() => {
-                increment(intervalNew, newNow, tempo);
-            }, tempo * coefficient);
-        } else {
-            let newNow = now + interval;
-            setOffset(newNow);
+        let targetSection = document.getElementById(name);
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(() => {
+            setTopic(name);
             changing.current = false;
-            setTimeout(() => {
-                let targetSection = document.getElementById('projectdiscription');
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-            }, 10);
-        }
+        }, 700);
     }
 
     return (

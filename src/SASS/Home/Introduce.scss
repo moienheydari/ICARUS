@@ -1,15 +1,28 @@
+@import '../partial';
+
 .introduce {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 90%;
     margin-bottom: 250px;
-    margin-top: 100px;
+    margin-top: 50px;
 
     .title1 {
         text-align: center;
         font-size: clamp(35px, 5vw, 85px);
-        margin-bottom: 250px;
+        margin-bottom: 20px;
+    }
+
+    .increments {
+        text-align: center;
+        font-size: clamp(24px, 3vw, 35px);
+        margin-bottom: 450px;
+
+        .numbers {
+            color: $Color4;
+            font-size: clamp(34px, 4vw, 45px);
+        }
     }
 
     .mid {
