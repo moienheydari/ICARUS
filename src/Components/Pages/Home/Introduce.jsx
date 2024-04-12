@@ -4,37 +4,41 @@ import HorizontalGallery from './HorizontalGallery';
 
 export default function Introduce() {
     const [numbers, setNumbers] = useState({
-        since: 0,
+        since: 1800,
         members: 0,
         projects: 0
     })
-    const INCREMENET_TIME = 2000;
 
     useEffect(() => {
-        setNumbers({
-            since: 1000,
-            members: 0,
-            projects: 0
-        })
         setTimeout(() => {
-            increment('since', 2015, INCREMENET_TIME / 1015);
-            increment('members', 120, INCREMENET_TIME / 120);
-            increment('projects', 4, INCREMENET_TIME / 4);
+            const INCREMENET_TIME = 2000;
+            increment(INCREMENET_TIME);
         }, 100);
     }, [])
 
-    let increment = (variable, goal, time) => {
-        setTimeout(() => {
-            setNumbers((prev) => {
-                if (prev[variable] + 1 < goal) {
-                    increment(variable, goal, time);
+    let increment = (time) => {
+        let intSince = 1900;
+        let intMembers = 0;
+        let intProjects = 0;
+
+        function timer(int, name, goal, time) {
+            setTimeout(() => {
+                setNumbers((prev) => {
+                    return {
+                        ...prev,
+                        [name]: int
+                    }
+                });
+                int++;
+                if (int < goal) {
+                    timer(int, name, goal, time);
                 }
-                return {
-                    ...prev,
-                    [variable]: prev[variable] + 1
-                }
-            });
-        }, time);
+            }, time);
+        }
+
+        timer(intSince, 'since', 2015, time / 115);
+        timer(intMembers, 'members', 120, time / 120);
+        timer(intProjects, 'projects', 4, time / 4);
     }
 
 
