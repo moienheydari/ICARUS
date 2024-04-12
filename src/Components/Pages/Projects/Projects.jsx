@@ -5,7 +5,7 @@ import ContactUS from '../../ContactUS.jsx';
 import NavBar from '../../NavBar.jsx';
 import ProjectDiscription from './ProjectDiscription.jsx';
 
-export default function Projects() {
+export default function Projects({children}) {
 
     return (
         <div className='projects' id='projects'>
@@ -13,7 +13,7 @@ export default function Projects() {
                 <Logo />
                 <NavBar />
             </div>
-            <ProjectDiscription />
+            <ProjectDiscription>{children}</ProjectDiscription>
             <ContactUS />
         </div>
     )

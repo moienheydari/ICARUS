@@ -2,7 +2,7 @@
 
 .projectdiscription {
     padding-top: 65px;
-    margin-bottom: 150px;
+    margin-bottom: 350px;
     width: 95%;
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -65,21 +65,5 @@
                 margin-bottom: 18px;
             }
         }
-    }
-
-    .right::-webkit-scrollbar {
-        width: 4px;
-    }
-
-    .right::-webkit-scrollbar-track {
-        background: #eeeeee90;
-    }
-
-    .right::-webkit-scrollbar-thumb {
-        background: #440000;
-    }
-
-    .right::-webkit-scrollbar-thumb:hover {
-        background: #ff0000;
     }
 }
