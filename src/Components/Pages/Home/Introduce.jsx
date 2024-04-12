@@ -12,14 +12,14 @@ export default function Introduce() {
 
     useEffect(() => {
         setNumbers({
-            since: 0,
+            since: 1000,
             members: 0,
             projects: 0
         })
         setTimeout(() => {
-            increment('since', 2015, INCREMENET_TIME);
-            increment('members', 120, INCREMENET_TIME);
-            increment('projects', 4, INCREMENET_TIME);
+            increment('since', 2015, INCREMENET_TIME / 1015);
+            increment('members', 120, INCREMENET_TIME / 120);
+            increment('projects', 4, INCREMENET_TIME / 4);
         }, 100);
     }, [])
 
@@ -34,7 +34,7 @@ export default function Introduce() {
                     [variable]: prev[variable] + 1
                 }
             });
-        }, (time / goal));
+        }, time);
     }
 
 

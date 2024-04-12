@@ -15,9 +15,12 @@ export default function ProjectDiscription({ children }) {
         window.scrollTo(0, 0);
 
         ////////////// Setting element positions 
-        wwdel.current = Math.floor(document.getElementById('wwd').offsetTop - document.getElementById('projects').offsetTop) - 25;
-        goalsel.current = Math.floor(document.getElementById('goals').offsetTop - document.getElementById('projects').offsetTop) - 25;
-        fleetel.current = Math.floor(document.getElementById('fleet').offsetTop - document.getElementById('projects').offsetTop) - 25;
+        if (document.getElementById('wwd') && document.getElementById('goals') && document.getElementById('fleet')) {
+            wwdel.current = Math.floor(document.getElementById('wwd').offsetTop - document.getElementById('projects').offsetTop) - 25;
+            goalsel.current = Math.floor(document.getElementById('goals').offsetTop - document.getElementById('projects').offsetTop) - 25;
+            fleetel.current = Math.floor(document.getElementById('fleet').offsetTop - document.getElementById('projects').offsetTop) - 25;
+        }
+
         ////////////// Setting scrollbar eventlistener
         let isThrottled = false;
         const scrollHandler = () => {
@@ -53,8 +56,10 @@ export default function ProjectDiscription({ children }) {
     function handleClickTopic(name) {
         changing.current = true;
         setTopic(name);
-        let targetSection = document.getElementById(name);
-        targetSection.scrollIntoView({ behavior: 'smooth' });
+        if (document.getElementById(name)) {
+            let targetSection = document.getElementById(name);
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
         setTimeout(() => {
             setTopic(name);
             changing.current = false;
