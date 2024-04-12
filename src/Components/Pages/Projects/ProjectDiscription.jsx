@@ -11,29 +11,16 @@ export default function ProjectDiscription({ children }) {
 
 
     useEffect(() => {
-        ////////////// When Opened with <Link>
-        window.scrollTo(0, 0);
-
-        ////////////// Setting element positions 
-        if (document.getElementById('wwd') && document.getElementById('goals') && document.getElementById('fleet')) {
-            wwdel.current = Math.floor(document.getElementById('wwd').offsetTop - document.getElementById('projects').offsetTop) - 25;
-            goalsel.current = Math.floor(document.getElementById('goals').offsetTop - document.getElementById('projects').offsetTop) - 25;
-            fleetel.current = Math.floor(document.getElementById('fleet').offsetTop - document.getElementById('projects').offsetTop) - 25;
-        }
-
-        ////////////// Setting scrollbar eventlistener
-        let isThrottled = false;
-        const scrollHandler = () => {
-            if (!isThrottled && !changing.current) {
-                setScrollTop(window.scrollY);
-                isThrottled = true;
-                setTimeout(() => {
-                    isThrottled = false;
-                }, 100);
+        wwdel.current = Math.floor(document.getElementById('wwd').offsetTop - document.getElementById('app').offsetTop) - 20;
+        goalsel.current = Math.floor(document.getElementById('goals').offsetTop - document.getElementById('app').offsetTop) - 20;
+        fleetel.current = Math.floor(document.getElementById('fleet').offsetTop - document.getElementById('app').offsetTop) - 20;
+        const container = document.getElementById('app');
+        const intervalId = setInterval(() => {
+            if (!changing.current) {
+                setScrollTop(container.scrollTop);
             }
-        };
-        window.addEventListener('scroll', scrollHandler);
-        return () => window.removeEventListener('scroll', scrollHandler);
+        }, 100);
+        return () => clearInterval(intervalId);
     }, []);
 
     ////////////// Checking scroll position
