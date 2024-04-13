@@ -1,9 +1,9 @@
 @import '../partial';
 
 .projectdiscription {
+    width: 95%;
     padding-top: 65px;
     margin-bottom: 350px;
-    width: 95%;
     display: grid;
     grid-template-columns: 1fr 3fr;
     border-bottom: 0.25px $Color5 dashed;
@@ -53,6 +53,7 @@
         transition: all 0.300s;
         padding-right: 80px;
         padding-left: 80px;
+        overflow: hidden;
 
 
         .subject {

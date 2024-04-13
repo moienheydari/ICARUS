@@ -11,16 +11,26 @@ export default function ProjectDiscription({ children }) {
 
 
     useEffect(() => {
-        wwdel.current = Math.floor(document.getElementById('wwd').offsetTop - document.getElementById('app').offsetTop) - 20;
-        goalsel.current = Math.floor(document.getElementById('goals').offsetTop - document.getElementById('app').offsetTop) - 20;
-        fleetel.current = Math.floor(document.getElementById('fleet').offsetTop - document.getElementById('app').offsetTop) - 20;
+        const handleResize = () => {
+            wwdel.current = Math.floor(document.getElementById('wwd').offsetTop - document.getElementById('app').offsetTop) - 20;
+            goalsel.current = Math.floor(document.getElementById('goals').offsetTop - document.getElementById('app').offsetTop) - 20;
+            fleetel.current = Math.floor(document.getElementById('fleet').offsetTop - document.getElementById('app').offsetTop) - 20;
+        };
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+
         const container = document.getElementById('app');
         const intervalId = setInterval(() => {
             if (!changing.current) {
                 setScrollTop(container.scrollTop);
             }
         }, 100);
-        return () => clearInterval(intervalId);
+        
+        return () => {
+            clearInterval(intervalId);
+            window.removeEventListener('resize', handleResize);
+        }
     }, []);
 
     ////////////// Checking scroll position

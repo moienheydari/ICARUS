@@ -9,7 +9,8 @@ export default function Projects({ children }) {
 
     useEffect(() => {
         ////////////// When Opened with <Link>
-        window.scrollTo(0, 0);
+        let targetSection = document.getElementById('projects');
+        targetSection.scrollIntoView({ behavior: 'auto' });
     }, [])
 
     return (
