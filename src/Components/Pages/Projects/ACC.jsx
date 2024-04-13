@@ -19,7 +19,7 @@ export default function ACC() {
                     <p className='title'>ACC project - Air Cargo Challenge</p>
                     <p>
                         <div style={{ gridTemplateColumns: '1fr' }} className='images' >
-                            <img src={myImage1} style={{ height: '400px' }} alt="*Image not Supported" />
+                            <img src={myImage1} alt="*Image not Supported" />
                         </div>
                         Our goal is to develop cargo UAVs to take part in the Air Cargo Challenge, an    international competition among university teams from all over the world, which takes place every two years.
                         <br /><br /><br />
@@ -28,7 +28,7 @@ export default function ACC() {
                         The goal of the Air Cargo Challenge is the development of cargo UAVs that can perform a certain mission. The scoring parameters include how much payload our airmodels can transport, how fast they go, and how efficient they are. There are also bonus points for special features, like the ability of our aircraft to take-off from a short runway, or the task for our team members to load the payload in the airplane as fast as possible!
                         <br />
                         <div style={{ gridTemplateColumns: '1fr' }} className='images' >
-                            <img src={myImage2} style={{ height: '250px' }} alt="*Image not Supported" />
+                            <img src={myImage2} alt="*Image not Supported" />
                         </div>
                         <br />
                         Each edition of the Air Cargo Challenge is organized by the team that won the previous edition, which is in charge of hosting the competition and writing the regulations.
@@ -40,8 +40,8 @@ export default function ACC() {
                         To design a new prototype, we start by carefully analyzing the regulations, in order to understand the design target that could best optimize the performance and the score of our aircraft. We use tools such as Matlab, Open VSP, XFLR5, Catia V5 and Solidworks to come up with a preliminary design. Then, we optimize our design using more powerful calculation tools like STAR CCM+, for CFD analyses, and the Altair HyperWorks suite to perform structural analyses on our configurations.
                         <br />
                         <div style={{ gridTemplateColumns: '1fr 1fr' }} className='images' >
-                            <img src={myImage3} style={{ height: '350px' }} alt="*Image not Supported" />
-                            <img src={myImage4} style={{ height: '350px' }} alt="*Image not Supported" />
+                            <img src={myImage3} style={{ width: '98%' }} alt="*Image not Supported" />
+                            <img src={myImage4} style={{ width: '98%' }} alt="*Image not Supported" />
                         </div>
                         <br />
                         After the design phase is finalized, we proceed with the manufacturing of our model. We use innovative materials and techniques, such as advanced composite materials, specifically designed using FEM-backed composite-design tools and topologically optimized to achieve the best structural performance with minimum weight, and additive manufacturing for the manufacturing of the parts that have the most complex shapes.
@@ -59,7 +59,7 @@ export default function ACC() {
                         ACC 2024 will be held in Aachen (Germany). According to the regulations, we have to develop a cargo UAV that can transport billiard balls representing “passengers”. The flight mission is composed of four phases: take-off and climb, a maximum efficiency task, a maximum speed task, and landing, and we are evaluated based on the performance during each task, and on how many balls we carry.
                     </p>
                     <div style={{ gridTemplateColumns: '1fr' }} className='images' >
-                        <img src={myImage5} style={{ height: '550px' }} alt="*Image not Supported" />
+                        <img src={myImage5} alt="*Image not Supported" />
                     </div>
                 </div>
                 <div className='subject' id='fleet'>
@@ -69,19 +69,19 @@ export default function ACC() {
                         <br /><br /><br />
                         <p style={{ textAlign: 'center' }}>Anubi – ACC 2017</p>
                         <div style={{ gridTemplateColumns: '1fr' }} className='images' >
-                            <img src={myImage6} style={{ height: '250px' }} alt="*Image not Supported" />
+                            <img src={myImage6} style={{ width: '50%' }} alt="*Image not Supported" />
                         </div>
                         Anubi was developed to participate in ACC 2019 in Zagreb. It was the first ever airplane to be built by Icarus Team. Today, it is being used by the PhotoNext research team in the Department of Mechanical and Aerospace Engineering at PoliTO, who have installed new and innovative equipment on it, including optical fiber sensors, to perform structural monitoring on the aircraft in real time during its flight.
                         <br /><br /><br />
                         <p style={{ textAlign: 'center' }}>Vega – ACC 2019</p>
                         <div style={{ gridTemplateColumns: '1fr' }} className='images' >
-                            <img src={myImage7} style={{ height: '250px' }} alt="*Image not Supported" />
+                            <img src={myImage7} style={{ width: '50%' }} alt="*Image not Supported" />
                         </div>
                         Vega is the aircraft model we have developed for the Air Cargo Challenge 2019 in Stuttgart. It is the biggest UAV that has been built in the ACC section of our team, and it was the one that achieved the best ranking during the competition.
                         <br /><br /><br />
                         <p style={{ textAlign: 'center' }}>Ichor – ACC 2022</p>
                         <div style={{ gridTemplateColumns: '1fr' }} className='images' >
-                            <img src={myImage8} style={{ height: '250px' }} alt="*Image not Supported" />
+                            <img src={myImage8} style={{ width: '50%' }} alt="*Image not Supported" />
                         </div>
                         Ichor is the latest airplane our team has built. It was developed to participate to the Air Cargo Challenge 2022 in Munchen, and its mission, according to the regulations, is to transport blood bags to simulate an emergency situation in which medial assistance is needed in areas that are difficult to reach.
                         <br />
