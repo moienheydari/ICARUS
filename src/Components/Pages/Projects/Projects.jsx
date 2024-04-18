@@ -5,7 +5,7 @@ import ContactUS from '../../ContactUS.jsx';
 import NavBar from '../../NavBar.jsx';
 import ProjectDiscription from './ProjectDiscription.jsx';
 
-export default function Projects({ children }) {
+export default function Projects({ children, load }) {
 
     useEffect(() => {
         ////////////// When Opened with <Link>
@@ -19,7 +19,7 @@ export default function Projects({ children }) {
                 <Logo />
                 <NavBar />
             </div>
-            <ProjectDiscription>{children}</ProjectDiscription>
+            <ProjectDiscription load={load}>{children}</ProjectDiscription>
             <ContactUS />
         </div>
     )

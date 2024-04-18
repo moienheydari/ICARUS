@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '../../../css/Projectdiscription.css';
 
-export default function ProjectDiscription({ children }) {
+export default function ProjectDiscription({ children, load }) {
     const [topic, setTopic] = useState('disc');
     const [scrollTop, setScrollTop] = useState(0);
     const changing = useRef(false);
@@ -11,11 +11,6 @@ export default function ProjectDiscription({ children }) {
 
 
     useEffect(() => {
-        const handleResize = () => {
-            wwdel.current = Math.floor(document.getElementById('wwd').offsetTop - document.getElementById('app').offsetTop) - 20;
-            goalsel.current = Math.floor(document.getElementById('goals').offsetTop - document.getElementById('app').offsetTop) - 20;
-            fleetel.current = Math.floor(document.getElementById('fleet').offsetTop - document.getElementById('app').offsetTop) - 20;
-        };
         handleResize();
 
         window.addEventListener('resize', handleResize);
@@ -26,7 +21,7 @@ export default function ProjectDiscription({ children }) {
                 setScrollTop(container.scrollTop);
             }
         }, 100);
-        
+
         return () => {
             clearInterval(intervalId);
             window.removeEventListener('resize', handleResize);
@@ -49,6 +44,17 @@ export default function ProjectDiscription({ children }) {
             }
         }
     }, [scrollTop, changing]);
+
+    useEffect(() => {
+        handleResize();
+        console.log(load);
+    }, [load])
+
+    function handleResize() {
+        wwdel.current = Math.floor(document.getElementById('wwd').offsetTop - document.getElementById('app').offsetTop) - 20;
+        goalsel.current = Math.floor(document.getElementById('goals').offsetTop - document.getElementById('app').offsetTop) - 20;
+        fleetel.current = Math.floor(document.getElementById('fleet').offsetTop - document.getElementById('app').offsetTop) - 20;
+    };
 
     function handleClickTopic(name) {
         changing.current = true;

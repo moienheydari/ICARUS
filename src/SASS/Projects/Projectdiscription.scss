@@ -25,8 +25,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 0 10px 10px 0;
-            background: rgba(255, 255, 255, 0.678);
+            border-radius: 2px 12px 12px 2px;
+            background: rgba(255, 255, 255, 0.188);
             -webkit-backdrop-filter: blur(0.75px);
             backdrop-filter: blur(0.75px);
             border: 0.5px solid rgba(0, 0, 0, 0.2);
@@ -34,7 +34,7 @@
             p {
                 font-size: clamp(16px, 2.2vw, 30px);
                 font-weight: 800;
-                color: $Color2;
+                color: $Color5;
                 text-align: center;
             }
 
@@ -42,9 +42,10 @@
 
         .show {
             transform: translateX(25px);
+            background: rgba(255, 255, 255, 0.462);
 
             p {
-                color: $Color3;
+                color: $Color1;
             }
         }
     }
