@@ -6,7 +6,7 @@
     align-items: center;
     width: 85%;
     margin-bottom: 250px;
-    
+
     .expl {
         position: relative;
         margin-bottom: 80px;
@@ -18,28 +18,34 @@
             font-size: clamp(24px, 3vw, 35px);
         }
     }
-    
+
     .gallerycontainer {
-        height: 400px;
+        height: 425px;
+        img {
+            height: 425px;
+            width: 100%;
+            object-fit: cover;
+        }
+
         position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 5px;
-        width: 100%; 
+        width: 100%;
         transition: all 400ms;
 
         margin-bottom: 100px;
     }
-    
+
     .gallerycontainer:hover .box {
         filter: grayscale(100%) opacity(30%);
     }
-    
+
     .box {
         border: 1px $Color5 solid;
         cursor: pointer;
         position: relative;
-        background-position: center center; 
+        background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
 
@@ -48,31 +54,27 @@
         justify-content: center;
         align-items: center;
     }
-    
+
     .gallerycontainer .box:hover {
         filter: grayscale(0%) opacity(100%);
     }
-    
+
     .gallerycontainer:has(.box-1:hover) {
-        height: 600px;
         grid-template-columns: 3fr 1fr 1fr 1fr;
     }
-    
+
     .gallerycontainer:has(.box-2:hover) {
-        height: 600px;
         grid-template-columns: 1fr 3fr 1fr 1fr;
     }
-    
+
     .gallerycontainer:has(.box-3:hover) {
-        height: 600px;
         grid-template-columns: 1fr 1fr 3fr 1fr;
     }
-    
+
     .gallerycontainer:has(.box-4:hover) {
-        height: 600px;
         grid-template-columns: 1fr 1fr 1fr 3fr;
     }
-    
+
     .box::after {
         content: attr(data-text);
         position: absolute;
@@ -86,7 +88,7 @@
         transform: translateY(100px);
         transition: all 700ms;
     }
-    
+
     .box::before {
         content: "Click for More...";
         position: absolute;
@@ -100,13 +102,13 @@
         transition: all 500ms;
         opacity: 0;
     }
-    
+
     .box:hover::after {
         transform: translateY(0);
         opacity: 1;
     }
 
-    
+
     .box:hover::before {
         opacity: 1;
     }
