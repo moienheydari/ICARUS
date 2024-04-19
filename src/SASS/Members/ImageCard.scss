@@ -1,15 +1,51 @@
 .imagecard {
     display: flex;
-    gap: 4px;
+    gap: 10px;
     flex-direction: column;
     align-items: center;
+    position: relative;
 
     .imagebody {
+        margin-top: 8px;
         height: 100%;
+        transition: all 600ms ease;
+    }
 
+
+    .info {
+        position: absolute;
+        bottom: 35px;
+        display: grid;
+        grid-template-rows: 0fr;
+        opacity: 0;
+        transition: all 600ms ease;
+
+        .info-text {
+            padding: 8px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 8px;
+            overflow: hidden;
+
+            p {
+                font-size: clamp(8px, 1.3vw, 14px);
+                text-align: center;
+                line-height: 18px;
+            }
+        }
     }
 
     .names {
         font-size: clamp(10px, 1.8vw, 20px);
+    }
+}
+
+.imagecard:hover {
+    .imagebody {
+        transform: scale(1.1);
+    }
+
+    .info {
+        grid-template-rows: 1fr;
+        opacity: 1;
     }
 }

@@ -10,43 +10,50 @@
         width: 95%;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: 5fr 1fr;
-        row-gap: 15px;
         justify-items: center;
         padding-bottom: 10px;
         // border-bottom: 0.25px $Color5 dashed;
 
-
-        .button {
-            border-radius: 10px;
-            padding: 6px;
-
-            -webkit-backdrop-filter: blur(0.75px);
-            backdrop-filter: blur(0.75px);
-            border: 0.5px solid rgba(255, 255, 255, 0.3);
-
-            color: $Color5;
-            font-family: 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
-            text-decoration: none;
-            font-size: clamp(18px, 2vw, 26px);
-
+        .heads {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
 
-            transition: all 300ms ease;
-        }
+            .button {
+                // width: 180px;
+                height: 45px;
+                cursor: pointer;
+                border-radius: 10px;
+                padding: 6px;
 
-        .button:hover {
-            transform: scale(1.1);
-            border: 0.5px solid rgba(255, 255, 255, 0.7);
-            transition: all 300ms ease;
-        }
+                -webkit-backdrop-filter: blur(0.75px);
+                backdrop-filter: blur(0.75px);
+                border: 0.5px solid rgba(255, 255, 255, 0.3);
 
-        .button:active {
-            transform: scale(0.95);
-            border: 0.5px solid rgba(255, 255, 255, 1);
-            transition: all 300ms ease;
+                color: $Color5;
+                font-family: 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+                text-decoration: none;
+                font-size: clamp(8px, 1.4vw, 16px);
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+                transition: all 300ms ease;
+            }
+
+            .button:hover {
+                transform: scale(1.1);
+                border: 0.5px solid rgba(255, 255, 255, 0.7);
+                transition: all 300ms ease;
+            }
+
+            .button:active {
+                transform: scale(0.95);
+                border: 0.5px solid rgba(255, 255, 255, 1);
+                transition: all 300ms ease;
+            }
         }
     }
 
