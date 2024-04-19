@@ -1,1 +1,1 @@
-.imagecard{height:240px}.imagecard img{height:100%}/*# sourceMappingURL=ImageCard.css.map */
+.imagecard{display:flex;gap:4px;flex-direction:column;align-items:center}.imagecard img{height:100%}.imagecard .names{font-size:clamp(10px,1.8vw,20px)}/*# sourceMappingURL=ImageCard.css.map */
