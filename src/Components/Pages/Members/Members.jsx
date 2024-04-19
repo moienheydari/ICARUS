@@ -3,6 +3,7 @@ import '../../../css/Members.css';
 import Logo from '../../Logo';
 import NavBar from '../../NavBar';
 import ContactUS from '../../ContactUS';
+import MemberPhotos from './MemberPhotos';
 
 export default function Members() {
 
@@ -12,11 +13,7 @@ export default function Members() {
                 <Logo />
                 <NavBar />
             </div>
-            <div></div>
-            <div></div>
-            <br /><br /><br /><br /><br /><br /><br /><br /><br />
-            <div></div>
-            <div></div>
+            <MemberPhotos />
             <ContactUS />
         </div>
     )
