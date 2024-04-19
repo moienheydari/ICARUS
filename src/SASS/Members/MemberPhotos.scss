@@ -108,6 +108,16 @@
             background: rgba(128, 0, 128, 0.1);
         }
 
+        .empty {
+            transition: grid-template-rows ease 200ms;
+
+            height: 500px;
+
+            p {
+                font-size: clamp(15px, 2.5vw, 30px);
+            }
+        }
+
         *.show {
             overflow: hidden;
             grid-template-rows: 1fr;

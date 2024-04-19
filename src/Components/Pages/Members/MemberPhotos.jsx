@@ -11,7 +11,7 @@ import ImageCardHead from './ImageCardHead';
 
 
 export default function MemberPhotos() {
-    const [panel, setPanel] = useState('acc');
+    const [panel, setPanel] = useState('empty');
 
     const images = require.context('../../../Assets/Members', true);
     const imageList = images.keys().map(image => images(image));
@@ -73,7 +73,13 @@ export default function MemberPhotos() {
                     <p className='button' onClick={() => { handleButton('comun') }} style={{ background: 'rgba(128, 0, 128, 0.65)' }}>Project Manager of <br />Communication</p>
                 </div>
             </div>
+
             <div className='memberbody'>
+                <div className={`panel empty ${panel == 'empty' ? 'show' : 'hide'}`}>
+                    <div className='content'>
+                        <p><br />Click Above to See the Team Members</p>
+                    </div>
+                </div>
                 <div className={`panel acc ${panel == 'acc' ? 'show' : 'hide'}`}>
                     <div className='content'>
                         {imageList.map((image, index) =>
