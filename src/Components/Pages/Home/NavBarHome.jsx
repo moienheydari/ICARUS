@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../../css/NavBarHome.css';
+import { Link } from 'react-router-dom';
 
 export default function NavBarHome() {
     function handleClickProjects() {
@@ -10,10 +11,10 @@ export default function NavBarHome() {
 
     return (
         <div className='navbarhome'>
-            <button onClick={handleClickProjects}>Projects</button>
-            <button>Apply</button>
-            <button>Sponsors</button>
-            <button>Members</button>
+            <button className='button' onClick={handleClickProjects}>Projects</button>
+            <Link className='button'>Apply</Link>
+            <Link className='button'>Sponsors</Link>
+            <Link className='button' to={'/Members'}>Members</Link>
         </div>
     )
 }

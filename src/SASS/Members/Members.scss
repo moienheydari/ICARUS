@@ -1,0 +1,11 @@
+@import '../partial';
+
+.members {
+    
+    .header {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        border-bottom: 1px $Color5 solid;
+    }
+}

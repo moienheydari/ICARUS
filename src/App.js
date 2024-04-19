@@ -6,6 +6,7 @@ import Videofile from './Assets/BackgroundVideo.mp4'
 import ACC from './Components/Pages/Projects/ACC';
 import Dart from './Components/Pages/Projects/Dart';
 import RA from './Components/Pages/Projects/RA';
+import Members from './Components/Pages/Members/Members';
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Route path='/ACC-Project' element={<ACC />} />
         <Route path='/Dart-Project' element={<Dart />} />
         <Route path='/RA-Project' element={<RA />} />
+        <Route path='/Members' element={<Members />} />
       </Routes>
     </div>
   );
