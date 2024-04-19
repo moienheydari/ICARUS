@@ -1,11 +1,11 @@
-.imagecard {
+.imagecardhead {
     display: flex;
     gap: 4px;
     flex-direction: column;
     align-items: center;
 
-    .imagebody {
-        height: 100%;
+    .imagehead {
+        width: 100%;
 
     }
 

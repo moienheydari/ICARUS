@@ -1,16 +1,20 @@
 @import '../partial';
 
 .memberphotos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 
     .memberhead {
+        width: 95%;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: 5fr 1fr;
         row-gap: 15px;
         justify-items: center;
         padding-bottom: 10px;
-        border-bottom: 0.25px $Color5 dashed;
+        // border-bottom: 0.25px $Color5 dashed;
 
 
         .button {
@@ -47,25 +51,22 @@
     }
 
     .memberbody {
+        margin-top: 10px;
+        margin-bottom: 70px;
         position: relative;
-        height: 1700px;
-        overflow: hidden;
+        width: 100%;
 
         .panel {
-            height: 1700px;
-            overflow: hidden;
-            transition: height ease 1000ms;
-            padding-top: 20px;
-
             width: 95%;
-            overflow: auto;
             position: absolute;
-            top: 0;
+            top: 0px;
             left: 50%;
             transform: translateX(-50%);
 
-            // -webkit-backdrop-filter: blur(0.1px);
-            // backdrop-filter: blur(0.1px);
+            display: grid;
+            grid-template-rows: 1fr;
+
+            transition: grid-template-rows ease 1350ms;
 
             .content {
                 overflow: hidden;
@@ -77,68 +78,39 @@
                 justify-content: center;
 
             }
-
         }
 
-        .acc.show {
-            overflow: hidden;
+        .acc {
             background: rgba(255, 255, 0, 0.1);
-            height: 1700px;
         }
 
-        .acc.hide {
-            overflow: hidden;
-            height: 0px;
-        }
-
-        .dart.show {
-            overflow: hidden;
+        .dart {
             background: rgba(255, 0, 0, 0.1);
-            height: 1700px;
         }
 
-        .dart.hide {
-            overflow: hidden;
-            height: 0px;
-        }
-
-
-        .ra.show {
-            overflow: hidden;
+        .ra {
             background: rgba(0, 0, 255, 0.1);
 
-            height: 1700px;
         }
 
-        .ra.hide {
-            overflow: hidden;
-            height: 0px;
+        .it {
+            background: rgba(0, 0, 0, 0.4);
         }
 
-
-        .it.show {
-            overflow: hidden;
-            background: rgba(0, 0, 0, 0.1);
-
-            height: 1700px;
-        }
-
-        .it.hide {
-            overflow: hidden;
-            height: 0px;
-        }
-
-
-        .comun.show {
-            overflow: hidden;
+        .comun {
             background: rgba(128, 0, 128, 0.1);
-
-            height: 1700px;
         }
 
-        .comun.hide {
+        *.show {
             overflow: hidden;
-            height: 0px;
+            grid-template-rows: 1fr;
+            z-index: 1;
+        }
+
+        *.hide {
+            overflow: hidden;
+            grid-template-rows: 0fr;
+            z-index: 0;
         }
 
     }

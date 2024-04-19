@@ -7,7 +7,7 @@ export default function ImageCard({ image, index, height, name }) {
 
     return (
         <div className='imagecard'>
-            <img src={image} alt={`image-${index}`} key={index} style={{ height: height }} />
+            <img className='imagebody' src={image} alt={`image-${index}`} key={index} style={{ height: height }} />
             <p className='names'>{nameContent[2] + ' ' + nameContent[3]}</p>
         </div>
     )
