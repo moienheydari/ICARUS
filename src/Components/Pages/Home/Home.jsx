@@ -10,10 +10,7 @@ export default function Home() {
 
     return (
         <div className='home' id='home'>
-            <div className='header'>
-                <Logo />
-                <NavBarHome />
-            </div>
+            <NavBarHome />
             <Introduce />
             <Projects />
             <ContactUS />

@@ -15,10 +15,7 @@ export default function Projects({ children, load }) {
 
     return (
         <div className='projects' id='projects'>
-            <div className='header'>
-                <Logo />
-                <NavBar />
-            </div>
+            <NavBar />
             <ProjectDiscription load={load}>{children}</ProjectDiscription>
             <ContactUS />
         </div>

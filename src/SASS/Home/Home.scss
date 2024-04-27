@@ -5,11 +5,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-
-    .header {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        border-bottom: 1px $Color5 solid;
-    }
+    height: 100vh;
+    overflow: auto;
+    position: relative;
 }

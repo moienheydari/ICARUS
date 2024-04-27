@@ -1,1 +1,1 @@
-.home{display:flex;flex-direction:column;align-items:center;width:100%}.home .header{display:flex;flex-direction:row;width:100%;border-bottom:1px #f2f2f2 solid}/*# sourceMappingURL=Home.css.map */
+.home{display:flex;flex-direction:column;align-items:center;width:100%;height:100vh;overflow:auto;position:relative}/*# sourceMappingURL=Home.css.map */

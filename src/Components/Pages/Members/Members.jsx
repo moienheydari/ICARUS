@@ -9,10 +9,7 @@ export default function Members() {
 
     return (
         <div className='members'>
-            <div className='header'>
-                <Logo />
-                <NavBar />
-            </div>
+            <NavBar />
             <MemberPhotos />
             <ContactUS />
         </div>
