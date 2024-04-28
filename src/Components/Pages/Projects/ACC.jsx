@@ -14,10 +14,7 @@ export default function ACC() {
     const [loadCounter, setLoadCounter] = useState(0);
 
     const handleImageLoad = () => {
-        setLoadCounter((prev) => {
-            // console.log(prev);
-            return prev + 1
-        });
+        setLoadCounter((prev) => { return prev + 1 });
     }
 
     return (

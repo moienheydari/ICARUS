@@ -10,12 +10,13 @@ export default function ProjectDiscription({ children, load }) {
     const fleetel = useRef();
 
 
+
     useEffect(() => {
         handleResize();
 
         window.addEventListener('resize', handleResize);
 
-        const container = document.getElementById('app');
+        const container = document.getElementById('projects');
         const intervalId = setInterval(() => {
             if (!changing.current) {
                 setScrollTop(container.scrollTop);
@@ -47,13 +48,12 @@ export default function ProjectDiscription({ children, load }) {
 
     useEffect(() => {
         handleResize();
-        console.log(load);
     }, [load])
 
     function handleResize() {
-        wwdel.current = Math.floor(document.getElementById('wwd').offsetTop - document.getElementById('app').offsetTop) - 20;
-        goalsel.current = Math.floor(document.getElementById('goals').offsetTop - document.getElementById('app').offsetTop) - 20;
-        fleetel.current = Math.floor(document.getElementById('fleet').offsetTop - document.getElementById('app').offsetTop) - 20;
+        wwdel.current = Math.floor(document.getElementById('wwd').offsetTop - document.getElementById('app').offsetTop) - 40;
+        goalsel.current = Math.floor(document.getElementById('goals').offsetTop - document.getElementById('app').offsetTop) - 40;
+        fleetel.current = Math.floor(document.getElementById('fleet').offsetTop - document.getElementById('app').offsetTop) - 40;
     };
 
     function handleClickTopic(name) {

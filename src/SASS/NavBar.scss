@@ -20,6 +20,7 @@
         width: auto;
         display: flex;
         border-radius: 0 0 0 25px;
+        transition: border-radius 0.500s ease;
 
 
         .button {
@@ -41,17 +42,66 @@
         .button:hover {
             background: rgba(0, 0, 0, 0.9);
             text-decoration: underline;
-            border: 0.5px solid rgba(0, 0, 0, 0.8);
         }
 
         .button:active {
             background: rgba(0, 0, 0, 1);
             text-decoration: underline;
-            border: 0.5px solid rgba(0, 0, 0, 1);
         }
 
         .farleft {
+            cursor: -webkit-grabbing;
+            padding: 10px 22px 0 22px;
+            background: rgba(0, 0, 0, 0.8);
+            -webkit-backdrop-filter: blur(0.85px);
+            backdrop-filter: blur(0.85px);
+
+            font-family: 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+            text-decoration: none;
+            color: $Color5;
+            font-size: clamp(18px, 2vw, 26px);
+
+            display: flex;
+            justify-content: center;
+            align-items: start;
+
             border-radius: 0 0 0 25px;
+            position: relative;
+
+            .projButtons {
+                position: absolute;
+                top: 50px;
+                display: grid;
+                grid-template-rows: 0fr;
+                transition: grid-template-rows 0.600s ease;
+
+                .content {
+                    overflow: hidden;
+                }
+            }
         }
+
+        .farleft:hover {
+            border-radius: 0 0 0 10px;
+            transition: all 0.600s ease;
+            background: rgba(0, 0, 0, 0.9);
+            text-decoration: none;
+
+            .projButtons {
+                border: 1px $Color5 solid;
+                border-radius: 0 0 15px 15px;
+                grid-template-rows: 1fr;
+
+                .fardown {
+                    border-radius: 0 0 15px 15px;
+                    padding-bottom: 5px;
+                }
+            }
+        }
+    }
+
+
+    .buttons:has(.farleft:hover) {
+        border-radius: 0 0 0 10px;
     }
 }

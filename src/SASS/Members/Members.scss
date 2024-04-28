@@ -1,3 +1,6 @@
 @import '../partial';
 
-.members {}
+.members {
+    height: 100vh;
+    overflow: auto;
+}

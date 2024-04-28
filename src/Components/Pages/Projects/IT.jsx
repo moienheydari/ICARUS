@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../../css/Dart.css';
+import '../../../css/IT.css';
 import Projects from './Projects';
 import myImage1 from '../../../Assets/ACC/ACC_Text_1.jpg';
 import myImage2 from '../../../Assets/ACC/ACC_Text_2.jpg';
@@ -19,7 +19,7 @@ export default function Dart() {
 
     return (
         <Projects load={loadCounter}>
-            <div className='dart'>
+            <div className='it'>
                 <div className='subject' id='disc'>
                     <p className='title'>ACC project - Air Cargo Challenge</p>
                     <div style={{ gridTemplateColumns: '1fr' }} className='images' >
