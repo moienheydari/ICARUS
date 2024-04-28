@@ -4,22 +4,32 @@
     position: relative;
     display: flex;
     justify-content: center;
-    width: 1300px;
+    width: 100%;
 
     .slide {
-        border: 1px $Color5 solid;
+        border-top: 1px $Color5 solid;
+        border-bottom: 1px $Color5 solid;
         position: absolute;
         top: 0;
         width: 100%;
-        
+
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
 
-        
+
         background-size: cover;
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+}
+
+
+
+@media (max-width: 780px) {
+
+    .horizontalgallery {
+        width: 100%;
     }
 }

@@ -7,7 +7,7 @@
 
     .imagebody {
         margin-top: 8px;
-        height: 100%;
+        width: 240px;
         transition: all 600ms ease;
     }
 
@@ -27,7 +27,7 @@
             overflow: hidden;
 
             p {
-                font-size: clamp(8px, 1.3vw, 14px);
+                font-size: clamp(7px, 1.3vw, 14px);
                 text-align: center;
                 line-height: 18px;
             }
@@ -47,5 +47,57 @@
     .info {
         grid-template-rows: 1fr;
         opacity: 1;
+    }
+}
+
+
+@media (max-width: 780px) {
+    .imagecard {
+        .imagebody {
+            width: 160px;
+        }
+
+        .info {
+            bottom: 15px;
+
+            .info-text {
+                padding: 3px;
+
+                p {
+                    text-align: center;
+                    line-height: 9px;
+
+                    svg {
+                        width: 4px;
+                        height: 4px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .imagecard {
+        .imagebody {
+            width: 200px;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .imagecard {
+        .imagebody {
+            width: 180px;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .imagecard {
+        .imagebody {
+            width: 100px;
+        }
     }
 }

@@ -6,11 +6,11 @@ import myImage3 from '../../../Assets/Home/Gallery_03.jpg';
 import myImage4 from '../../../Assets/Home/Gallery_04.jpg';
 import myImage5 from '../../../Assets/Home/Gallery_05.jpg';
 
-export default function HorizontalGallery() {
-    const height = 275;
-    const delay = 2750;
+export default function HorizontalGallery({ height }) {
     const [slides, setSlides] = useState([[0 * height, 0], [1 * height, 1], [2 * height, 1], [3 * height, 1], [4 * height, 0]]);
+    const delay = 2750;
 
+    /// setting-interval
     useEffect(() => {
         setInterval(() => {
             changeSlides();

@@ -51,9 +51,9 @@ export default function ProjectDiscription({ children, load }) {
     }, [load])
 
     function handleResize() {
-        wwdel.current = Math.floor(document.getElementById('wwd').offsetTop - document.getElementById('app').offsetTop) - 40;
-        goalsel.current = Math.floor(document.getElementById('goals').offsetTop - document.getElementById('app').offsetTop) - 40;
-        fleetel.current = Math.floor(document.getElementById('fleet').offsetTop - document.getElementById('app').offsetTop) - 40;
+        wwdel.current = Math.floor(document.getElementById('wwd').offsetTop - document.getElementById('app').offsetTop) - 55;
+        goalsel.current = Math.floor(document.getElementById('goals').offsetTop - document.getElementById('app').offsetTop) - 55;
+        fleetel.current = Math.floor(document.getElementById('fleet').offsetTop - document.getElementById('app').offsetTop) - 55;
     };
 
     function handleClickTopic(name) {

@@ -7,6 +7,7 @@
     position: relative;
 
     .imagehead {
+
         width: 100%;
         transition: all 600ms ease;
     }
@@ -36,7 +37,8 @@
 
     .names {
         margin-top: 10px;
-        font-size: clamp(10px, 1.8vw, 20px);
+        font-size: clamp(8px, 1.8vw, 20px);
+        text-align: center;
     }
 }
 
@@ -48,5 +50,29 @@
     .info {
         grid-template-rows: 1fr;
         opacity: 1;
+    }
+}
+
+
+
+@media (max-width: 780px) {
+    .imagecardhead {
+        .info {
+            bottom: 15px;
+
+            .info-text {
+                padding: 3px;
+
+                p {
+                    text-align: center;
+                    line-height: 9px;
+
+                    svg {
+                        width: 4px;
+                        height: 4px;
+                    }
+                }
+            }
+        }
     }
 }

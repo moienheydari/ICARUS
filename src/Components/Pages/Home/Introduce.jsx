@@ -9,6 +9,7 @@ export default function Introduce() {
         projects: 0
     })
 
+    ////// starting increment
     useEffect(() => {
         setTimeout(() => {
             const INCREMENET_TIME = 2000;
@@ -56,10 +57,13 @@ export default function Introduce() {
                     <br /><br /><br /><br /><br />
                     <p className='title2'>WHO ARE WE?</p>
 
-                    <br /><br /><br /><br />
+                    <br /><br /><br />
                     <p className='expl'>ICARUS PoliTO is a Student Team of the Politecnico di Torino. Born in 2015 with a purely aerospace character, the Team has more than 120 effective members working on 4 main projects</p>
                 </div>
-                <HorizontalGallery />
+                <div className='galleryCont'>
+                    <HorizontalGallery height={275} />
+                    <HorizontalGallery height={150} />
+                </div>
             </div>
         </div>
     )

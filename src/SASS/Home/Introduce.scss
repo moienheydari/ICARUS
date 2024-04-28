@@ -10,30 +10,66 @@
 
     .title1 {
         text-align: center;
-        font-size: clamp(35px, 5vw, 85px);
+        font-size: clamp(45px, 5vw, 85px);
         margin-bottom: 20px;
     }
 
     .increments {
         text-align: center;
-        font-size: clamp(24px, 3vw, 35px);
+        font-size: clamp(20px, 3vw, 35px);
         margin-bottom: 450px;
 
         .numbers {
             color: $Color4;
-            font-size: clamp(34px, 4vw, 45px);
+            font-size: clamp(28px, 4vw, 45px);
         }
     }
 
     .mid {
-        display: flex;
-        gap: 25px;
+        display: grid;
+        grid-template-columns: 5fr 3fr;
+        gap: 50px;
+        height: 4*275px;
 
         .texts {
+
             .title2 {
                 margin-top: 100px;
                 text-align: left;
-                font-size: clamp(24px, 3vw, 35px);
+                font-size: clamp(22px, 3vw, 35px);
+            }
+        }
+
+        .galleryCont {
+            display: grid;
+            grid-template-columns: 1fr 0fr;
+        }
+    }
+}
+
+
+
+@media (max-width: 780px) {
+    .introduce {
+        margin-top: 30px;
+        margin-bottom: 150px;
+
+        .increments {
+            margin-bottom: 200px;
+        }
+
+        .mid {
+            gap: 25px;
+            height: 4*150px;
+
+            .texts {
+                .title2 {
+                    margin-top: 10px;
+                }
+            }
+
+            .galleryCont {
+                grid-template-columns: 0fr 1fr;
             }
         }
     }

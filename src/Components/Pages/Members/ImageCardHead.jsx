@@ -5,6 +5,7 @@ export default function ImageCardHead({ image, index, name }) {
     name = new String(name)
     const nameContent = name.split('_');
     const moreInfo = {
+        'Email': nameContent[4],
     }
     const moreInfoArray = [];
     for (const key of Object.keys(moreInfo)) {

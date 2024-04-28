@@ -84,7 +84,7 @@ export default function MemberPhotos() {
                     <div className='content'>
                         {imageList.map((image, index) =>
                             String(imageNames[index]).split('_')[0].toLowerCase() === 'acc' ?
-                                (<ImageCard image={image} index={index} height={240} key={index} name={imageNames[index]} />)
+                                (<ImageCard image={image} index={index} key={index} name={imageNames[index]} />)
                                 :
                                 null
                         )}
@@ -94,7 +94,7 @@ export default function MemberPhotos() {
                     <div className='content'>
                         {imageList.map((image, index) =>
                             String(imageNames[index]).split('_')[0].toLowerCase() === 'dart' ?
-                                (<ImageCard image={image} index={index} height={240} key={index} name={imageNames[index]} />)
+                                (<ImageCard image={image} index={index} key={index} name={imageNames[index]} />)
                                 :
                                 null
                         )}
@@ -104,7 +104,7 @@ export default function MemberPhotos() {
                     <div className='content'>
                         {imageList.map((image, index) =>
                             String(imageNames[index]).split('_')[0].toLowerCase() === 'ra' ?
-                                (<ImageCard image={image} index={index} height={240} key={index} name={imageNames[index]} />)
+                                (<ImageCard image={image} index={index} key={index} name={imageNames[index]} />)
                                 :
                                 null
                         )}
@@ -114,7 +114,7 @@ export default function MemberPhotos() {
                     <div className='content'>
                         {imageList.map((image, index) =>
                             String(imageNames[index]).split('_')[0].toLowerCase() === 'it' ?
-                                (<ImageCard image={image} index={index} height={240} key={index} name={imageNames[index]} />)
+                                (<ImageCard image={image} index={index} key={index} name={imageNames[index]} />)
                                 :
                                 null
                         )}
@@ -124,7 +124,7 @@ export default function MemberPhotos() {
                     <div className='content'>
                         {imageList.map((image, index) =>
                             String(imageNames[index]).split('_')[0].toLowerCase() === 'communication' ?
-                                (<ImageCard image={image} index={index} height={240} key={index} name={imageNames[index]} />)
+                                (<ImageCard image={image} index={index} key={index} name={imageNames[index]} />)
                                 :
                                 null
                         )}

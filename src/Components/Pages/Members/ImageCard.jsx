@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../../css/ImageCard.css';
 
-export default function ImageCard({ image, index, height, name }) {
+export default function ImageCard({ image, index, name }) {
     name = new String(name)
     const nameContent = name.split('_');
     const moreInfo = {
@@ -15,7 +15,7 @@ export default function ImageCard({ image, index, height, name }) {
 
     return (
         <div className='imagecard'>
-            <img className='imagebody' src={image} alt={`image-${index}`} key={index} style={{ height: height }} />
+            <img className='imagebody' src={image} alt={`image-${index}`} key={index} />
             <div className='info'>
                 <div className='info-text'>
                     {moreInfoArray.map((pair) => {

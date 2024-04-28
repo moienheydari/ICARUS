@@ -30,7 +30,7 @@ export default function NavBar() {
                 </div>
                 <Link className='button' onClick={() => { handleLinkClick('/Apply') }}>Apply</Link>
                 <Link className='button' onClick={() => { handleLinkClick('/Sponsers') }}>Sponsors</Link>
-                <Link className='button' to={'/Members'} onClick={() => { handleLinkClick('/Members') }}>Members</Link>
+                <Link className='button membrs' to={'/Members'} onClick={() => { handleLinkClick('/Members') }}>Members</Link>
             </div>
         </div>
     )

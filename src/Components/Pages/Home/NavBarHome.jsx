@@ -17,7 +17,7 @@ export default function NavBarHome() {
                 <Link className='button farleft' onClick={handleClickProjects}>Projects</Link>
                 <Link className='button'>Apply</Link>
                 <Link className='button'>Sponsors</Link>
-                <Link className='button' to={'/Members'}>Members</Link>
+                <Link className='button membrs' to={'/Members'}>Members</Link>
             </div>
         </div>
     )

@@ -2,21 +2,20 @@
 
 .contactus {
     width: 100%;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
 
 
     .title {
-        font-size: clamp(22px, 3vw, 30px);
-        padding-left: 100px;
-        padding-right: 100px;
+        font-size: clamp(18px, 3vw, 30px);
+        padding-left: 40px;
         margin-bottom: 12px;
     }
 
     .expl {
-        padding: 30px 100px 35px 100px;
+        padding: 30px 20px 35px 40px;
         border-top: 1px $Color5 solid;
         border-bottom: 1px $Color5 solid;
-        font-size: clamp(16px, 2vw, 25px);
+        font-size: clamp(10px, 2vw, 25px);
     }
 
     .card {
@@ -100,4 +99,33 @@
         }
     }
 
+}
+
+
+@media (max-width: 780px) {
+    .contactus {
+        .title {
+            padding-left: 20px;
+            margin-bottom: 6px;
+        }
+
+        .expl {
+            padding: 10px 10px 15px 20px;
+        }
+
+        .card {
+            padding: 15px 25px;
+            gap: 3px;
+
+            .socialSvg {
+                width: 15px;
+            }
+
+            /* for all social containers*/
+            .socialContainer {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
 }

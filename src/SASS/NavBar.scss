@@ -12,7 +12,7 @@
 
 
     .buttons {
-        border-bottom: 1px $Color5 solid;
+        border-bottom: 2px $Color5 solid;
         border-left: 2px $Color5 solid;
         position: absolute;
         right: 0;
@@ -24,7 +24,7 @@
 
 
         .button {
-            padding: 10px 22px 0 22px;
+            padding: 4px 16px 0 16px;
             background: rgba(0, 0, 0, 0.8);
             -webkit-backdrop-filter: blur(0.85px);
             backdrop-filter: blur(0.85px);
@@ -32,7 +32,7 @@
             font-family: 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
             text-decoration: none;
             color: $Color5;
-            font-size: clamp(18px, 2vw, 26px);
+            font-size: clamp(16px, 2vw, 26px);
 
             display: flex;
             justify-content: center;
@@ -51,7 +51,7 @@
 
         .farleft {
             cursor: -webkit-grabbing;
-            padding: 10px 22px 0 22px;
+            padding: 4px 16px 0 16px;
             background: rgba(0, 0, 0, 0.8);
             -webkit-backdrop-filter: blur(0.85px);
             backdrop-filter: blur(0.85px);
@@ -59,7 +59,7 @@
             font-family: 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
             text-decoration: none;
             color: $Color5;
-            font-size: clamp(18px, 2vw, 26px);
+            font-size: clamp(16px, 2vw, 26px);
 
             display: flex;
             justify-content: center;
@@ -89,8 +89,12 @@
 
             .projButtons {
                 border: 1px $Color5 solid;
-                border-radius: 0 0 15px 15px;
+                border-radius: 0 0 12px 12px;
                 grid-template-rows: 1fr;
+
+                .button {
+                    padding-bottom: 2px;
+                }
 
                 .fardown {
                     border-radius: 0 0 15px 15px;
@@ -103,5 +107,45 @@
 
     .buttons:has(.farleft:hover) {
         border-radius: 0 0 0 10px;
+    }
+}
+
+
+@media (max-width: 780px) {
+    .navbar {
+        grid-template-rows: 70px;
+        margin-bottom: 10px;
+
+
+        .buttons {
+            height: 54px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+
+            .button {
+                height: 25px;
+                // border-top: 1px $Color5 dotted;
+                // border-right: 1px $Color5 dotted;
+                font-size: clamp(7px, 2vw, 26px);
+            }
+
+
+            .farleft {
+                height: 25px;
+                // border-top: 1px $Color5 dotted;
+                // border-right: 1px $Color5 dotted;
+                font-size: clamp(7px, 2vw, 26px);
+                order: 1;
+
+                .projButtons {
+                    top: 27px;
+                }
+            }
+
+            .membrs {
+                order: 2;
+            }
+        }
     }
 }
