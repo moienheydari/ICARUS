@@ -33,7 +33,7 @@ export default function ProjectsHome() {
                 <Link to="/RA-Project" className='box box-3' data-text="RA">
                     <img src={myImage3} alt="not Supported" loading='eager' />
                 </Link>
-                <Link to="/" className='box box-4' data-text="IT">
+                <Link to="/IT-Project" className='box box-4' data-text="IT">
                     <img src={myImage4} alt="not Supported" loading='eager' />
                 </Link>
             </div>
