@@ -11,6 +11,7 @@ export default function ProjectDiscription({ children, load }) {
 
 
 
+    ////////////// Setting scrollbar position checking interval
     useEffect(() => {
         handleResize();
 
@@ -18,9 +19,9 @@ export default function ProjectDiscription({ children, load }) {
 
         const container = document.getElementById('projects');
         const intervalId = setInterval(() => {
-            if (!changing.current) {
-                setScrollTop(container.scrollTop);
-            }
+            // if (!changing.current) {
+            setScrollTop(container.scrollTop);
+            // }
         }, 100);
 
         return () => {
@@ -29,7 +30,7 @@ export default function ProjectDiscription({ children, load }) {
         }
     }, []);
 
-    ////////////// Checking scroll position
+    ////////////// Comparing scroll position to Divs
     useEffect(() => {
         if (wwdel.current <= scrollTop && scrollTop < goalsel.current) {
             setTopic('wwd');
@@ -46,27 +47,33 @@ export default function ProjectDiscription({ children, load }) {
         }
     }, [scrollTop, changing]);
 
+
+    ////////////// ReCalculating on image Loadings
     useEffect(() => {
         handleResize();
     }, [load])
 
+
+    ////////////// Calculating Div offsetTops
     function handleResize() {
-        wwdel.current = Math.floor(document.getElementById('wwd').offsetTop - document.getElementById('app').offsetTop) - 55;
-        goalsel.current = Math.floor(document.getElementById('goals').offsetTop - document.getElementById('app').offsetTop) - 55;
-        fleetel.current = Math.floor(document.getElementById('fleet').offsetTop - document.getElementById('app').offsetTop) - 55;
+        wwdel.current = Math.floor(document.getElementById('wwd').offsetTop - document.getElementById('app').offsetTop) - 60;
+        goalsel.current = Math.floor(document.getElementById('goals').offsetTop - document.getElementById('app').offsetTop) - 60;
+        fleetel.current = Math.floor(document.getElementById('fleet').offsetTop - document.getElementById('app').offsetTop) - 60;
     };
 
+
+    ////////////// Left Button Handling
     function handleClickTopic(name) {
-        changing.current = true;
-        setTopic(name);
+        // changing.current = true;
+        // setTopic(name);
         if (document.getElementById(name)) {
             let targetSection = document.getElementById(name);
             targetSection.scrollIntoView({ behavior: 'smooth' });
         }
-        setTimeout(() => {
-            setTopic(name);
-            changing.current = false;
-        }, 700);
+        // setTimeout(() => {
+        //     setTopic(name);
+        //     changing.current = false;
+        // }, 700);
     }
 
     return (

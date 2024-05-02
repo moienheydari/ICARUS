@@ -1,4 +1,3 @@
-import React from 'react';
 import '../../../css/NavBarHome.css';
 import Logo from '../../Logo.jsx';
 import { Link } from 'react-router-dom';

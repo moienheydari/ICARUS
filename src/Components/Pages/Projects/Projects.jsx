@@ -1,14 +1,13 @@
-import React, { useEffect } from 'react';
-import '../../../css/Projects.css';
-import Logo from '../../Logo.jsx';
+import { useEffect } from 'react';
+import ProjectDiscription from './ProjectDiscription.jsx';
 import ContactUS from '../../ContactUS.jsx';
 import NavBar from '../../NavBar.jsx';
-import ProjectDiscription from './ProjectDiscription.jsx';
+import '../../../css/Projects.css';
 
 export default function Projects({ children, load }) {
 
+    ////////////// When Opened with <Link>
     useEffect(() => {
-        ////////////// When Opened with <Link>
         let targetSection = document.getElementById('projects');
         targetSection.scrollIntoView({ behavior: 'auto' });
     }, [])
