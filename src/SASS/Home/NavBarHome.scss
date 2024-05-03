@@ -40,6 +40,11 @@
         .button:hover {
             background: rgba(0, 0, 0, 0.9);
             text-decoration: underline;
+            outline: none;
+        }
+
+        .button:focus {
+            outline: none;
         }
 
         .button:active {

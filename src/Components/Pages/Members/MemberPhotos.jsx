@@ -54,23 +54,23 @@ export default function MemberPhotos() {
             <div className='memberhead'>
                 <div className='heads' onClick={() => { handleButton('acc') }}>
                     <ImageCardHead image={myImage1} index={101} name={'ACC_MDV_Matteo_Tilocca_matteotilocca04@gmail.com.png'} />
-                    <p className='button' onClick={() => { handleButton('acc') }} style={{ background: 'rgba(255, 255, 0, 0.65)' }}>Project Manager of <br />ACC</p>
+                    <p className='button' onClick={() => { handleButton('acc') }} style={{ background: 'rgba(0, 2, 73, 0.7)' }}>Project Manager of <br />ACC</p>
                 </div>
                 <div className='heads' onClick={() => { handleButton('dart') }}>
                     <ImageCardHead image={myImage2} index={102} name={'DART_Manager_Matteo_Cafaro_&&&&&&.png'} />
-                    <p className='button' onClick={() => { handleButton('dart') }} style={{ background: 'rgba(255, 0, 0, 0.65)' }}>Project Manager of <br />DART</p>
+                    <p className='button' onClick={() => { handleButton('dart') }} style={{ background: 'rgba(0, 2, 73, 0.7)' }}>Project Manager of <br />DART</p>
                 </div>
                 <div className='heads' onClick={() => { handleButton('ra') }}>
                     <ImageCardHead image={myImage3} index={103} name={'RA_ProjectManagerRA_Stefano_Zappone_stefano.zappone@gmail.com.png'} />
-                    <p className='button' onClick={() => { handleButton('ra') }} style={{ background: 'rgba(0, 0, 255, 0.65)' }}>Project Manager of <br />RA</p>
+                    <p className='button' onClick={() => { handleButton('ra') }} style={{ background: 'rgba(0, 2, 73, 0.7)' }}>Project Manager of <br />RA</p>
                 </div>
                 <div className='heads' onClick={() => { handleButton('it') }} >
                     <ImageCardHead image={myImage4} index={104} name={'IT_Responsabile_Angelo_Romano_angelodaroma00@gmail.com.png'} />
-                    <p className='button' onClick={() => { handleButton('it') }} style={{ background: 'rgba(0, 0, 0, 0.65)' }}>Project Manager of <br />IT</p>
+                    <p className='button' onClick={() => { handleButton('it') }} style={{ background: 'rgba(0, 2, 73, 0.7)' }}>Project Manager of <br />IT</p>
                 </div>
                 <div className='heads' onClick={() => { handleButton('comun') }} >
                     <ImageCardHead image={myImage5} index={105} name={'Communication_SocialMediaManager_Andra_Mihaila_andra.mihaila11@gmail.com.png'} />
-                    <p className='button' onClick={() => { handleButton('comun') }} style={{ background: 'rgba(128, 0, 128, 0.65)' }}>Project Manager of <br />Communication</p>
+                    <p className='button' onClick={() => { handleButton('comun') }} style={{ background: 'rgba(0, 2, 73, 0.7)' }}>Project Manager of <br />Communication</p>
                 </div>
             </div>
 
