@@ -8,6 +8,8 @@ import Dart from './Components/Pages/Projects/Dart';
 import RA from './Components/Pages/Projects/RA';
 import IT from './Components/Pages/Projects/IT';
 import Members from './Components/Pages/Members/Members';
+import Sponsors from './Components/Pages/Sponsors/Sponsors';
+import Apply from './Components/Pages/Apply/Apply';
 
 export default function App() {
   return (
@@ -24,6 +26,8 @@ export default function App() {
         <Route path='/RA-Project' element={<RA />} />
         <Route path='/IT-Project' element={<IT />} />
         <Route path='/Members' element={<Members />} />
+        <Route path='/Sponsors' element={<Sponsors />} />
+        <Route path='/Apply' element={<Apply />} />
       </Routes>
     </div>
   );
