@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export default function NavBarHome() {
     function handleClickProjects() {
         let targetSection = document.getElementById('projects');
-        targetSection.scrollIntoView({ behavior: 'auto' });
+        targetSection.scrollIntoView({ behavior: 'smooth' });
     }
 
 

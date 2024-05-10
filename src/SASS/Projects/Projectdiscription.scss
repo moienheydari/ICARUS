@@ -10,15 +10,16 @@
 
     .left {
         position: sticky;
-        top: 130px;
+        top: 140px;
         margin-top: 30px;
-        height: 250px;
+        height: clamp(120px, 18vw, 250px);
         padding: 10px;
         display: grid;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         gap: 5px;
 
         .topic {
+            width: 100%;
             cursor: pointer;
             transition: all 0.300s;
             display: flex;
@@ -32,7 +33,7 @@
 
             p {
                 font-family: 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
-                font-size: clamp(10px, 2vw, 26px);
+                font-size: clamp(10px, 1.6vw, 26px);
                 font-weight: 800;
                 color: $Color5;
                 text-align: center;
@@ -92,18 +93,14 @@
 @media (max-width: 780px) {
 
     .projectdiscription {
+        grid-template-columns: 4fr 17fr;
         padding-top: 30px;
         margin-bottom: 100px;
 
         .left {
             position: sticky;
-            top: 90px;
-            height: 150px;
+            top: 70px;
             gap: 3px;
-
-            .topic {
-                width: 100px;
-            }
         }
 
         .right {
@@ -129,12 +126,13 @@
 
 
 
-@media (max-width: 500px) {
+@media (max-height: 450px) {
     .projectdiscription {
+
         .left {
-            .topic {
-                width: 70px;
-            }
+            top: 95px;
+            height: 160px;
+            gap: 2px;
         }
     }
 }
