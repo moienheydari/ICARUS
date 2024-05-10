@@ -24,6 +24,7 @@
 
 
         .button {
+            transition: all 1000ms ease;
             padding: 4px 16px 0 16px;
             background: rgba(0, 0, 0, 0.8);
             -webkit-backdrop-filter: blur(0.85px);
@@ -123,23 +124,19 @@
 
 
         .buttons {
-            height: 54px;
+            height: 51px;
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
 
             .button {
                 height: 25px;
-                // border-top: 1px $Color5 dotted;
-                // border-right: 1px $Color5 dotted;
                 font-size: clamp(7px, 2vw, 26px);
             }
 
 
             .farleft {
                 height: 25px;
-                // border-top: 1px $Color5 dotted;
-                // border-right: 1px $Color5 dotted;
                 font-size: clamp(7px, 2vw, 26px);
                 order: 1;
 

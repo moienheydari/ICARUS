@@ -22,7 +22,8 @@ export default function ImageCard({ image, index, name }) {
                         return (
                             <p key={`adwdad-${pair[1]}`}>
                                 <svg width="8" height="8"><circle cx="4" cy="4" r="4" fill="white" /></svg>&nbsp;
-                                {pair[0]} : {pair[1]}<br />
+                                {pair[0]} : {pair[1]}
+                                <br />
                             </p>
                         )
                     })}

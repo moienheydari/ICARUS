@@ -1,0 +1,41 @@
+.sponsorcard {
+    cursor: pointer;
+    padding-top: 10px;
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    background: rgba(7, 0, 215, 0.20);
+    border-radius: 10px;
+
+    transition: all 600ms ease;
+
+
+    .imagebody {
+        width: 70%;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        transition: all 600ms ease;
+    }
+
+    .imagebody:hover {
+        transform: scale(1.1);
+    }
+
+
+    .names {
+        margin-bottom: 15px;
+        font-size: clamp(10px, 2.2vw, 24px);
+    }
+}
+
+.sponsorcard:hover {
+    transform: scale(1.05);
+    background: rgba(8, 0, 228, 0.6);
+}
