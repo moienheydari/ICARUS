@@ -13,15 +13,18 @@ export default function ProjectDiscription({ children, load }) {
 
     ////////////// Checking Screen width (desktop vs. phone)
     useEffect(() => {
-        const mediaQuery = window.matchMedia('(max-width: 780px)');
+        const mediaQueryWidth = window.matchMedia('(max-width: 780px)');
+        const mediaQueryHieght = window.matchMedia('(max-height: 450px)');
         const handleMediaQueryResize = () => {
-            setScrollBehavior(mediaQuery.matches ? 'auto' : 'smooth');
+            setScrollBehavior((mediaQueryWidth.matches || mediaQueryHieght.matches) ? 'auto' : 'smooth');
         };
-        setScrollBehavior(mediaQuery.matches ? 'auto' : 'smooth');
+        setScrollBehavior((mediaQueryWidth.matches || mediaQueryHieght.matches) ? 'auto' : 'smooth');
 
-        mediaQuery.addListener(handleMediaQueryResize);
+        mediaQueryWidth.addListener(handleMediaQueryResize);
+        mediaQueryHieght.addListener(handleMediaQueryResize);
         return () => {
-            mediaQuery.removeListener(handleMediaQueryResize);
+            mediaQueryWidth.removeListener(handleMediaQueryResize);
+            mediaQueryHieght.removeListener(handleMediaQueryResize);
         };
     }, []);
 
