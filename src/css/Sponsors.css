@@ -1,1 +1,1 @@
-.sponsors{overflow:auto}/*# sourceMappingURL=Sponsors.css.map */
+.sponsors{display:flex;flex-direction:column;align-items:center;width:100%;height:100vh;overflow:auto;position:relative}/*# sourceMappingURL=Sponsors.css.map */

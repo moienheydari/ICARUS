@@ -1,15 +1,12 @@
 @import './partial';
 
 .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 50;
+    z-index: 10;
     width: 100%;
 
     display: grid;
     grid-template-columns: 1fr 10fr;
     grid-template-rows: 130px;
-
 
     .buttons {
         border-bottom: 2px $Color5 solid;
@@ -119,7 +116,7 @@
 
 @media (max-width: 780px) {
     .navbar {
-        grid-template-rows: 66px;
+        grid-template-rows: 90px;
         margin-bottom: 10px;
 
 
@@ -149,12 +146,5 @@
                 order: 2;
             }
         }
-    }
-}
-
-
-@media (max-height: 450px) {
-    .navbar {
-        grid-template-rows: 100px;
     }
 }

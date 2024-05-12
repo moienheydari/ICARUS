@@ -5,10 +5,12 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding-left: 45px;
+    padding-right: 45px;
 
 
     .memberhead {
-        width: 95%;
+        width: 100%;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         justify-items: center;
@@ -137,6 +139,9 @@
 
 @media (max-width: 780px) {
     .memberphotos {
+        padding-left: 25px;
+        padding-right: 25px;
+
         .memberhead {
             .heads {
                 .button {

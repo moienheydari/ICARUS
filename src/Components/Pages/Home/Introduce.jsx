@@ -4,7 +4,7 @@ import HorizontalGallery from './HorizontalGallery';
 
 export default function Introduce() {
     const [numbers, setNumbers] = useState({
-        since: 1800,
+        since: 2024,
         members: 0,
         projects: 0
     })
@@ -12,17 +12,20 @@ export default function Introduce() {
     ////// starting increment
     useEffect(() => {
         setTimeout(() => {
-            const INCREMENET_TIME = 2000;
+            const INCREMENET_TIME = 2500;
             increment(INCREMENET_TIME);
         }, 100);
     }, [])
 
     let increment = (time) => {
-        let intSince = 1900;
+        let intSince = 2024;
+        let goalSince = 2015;
         let intMembers = 0;
+        let goalMembers = 120;
         let intProjects = 0;
+        let goalProjects = 4;
 
-        function timer(int, name, goal, time) {
+        function timer(int, name, goal, time, increasing) {
             setTimeout(() => {
                 setNumbers((prev) => {
                     return {
@@ -30,16 +33,23 @@ export default function Introduce() {
                         [name]: int
                     }
                 });
-                int++;
-                if (int < goal) {
-                    timer(int, name, goal, time);
+                if (increasing) {
+                    int++;
+                    if (int < goal) {
+                        timer(int, name, goal, time, increasing);
+                    }
+                } else {
+                    int--;
+                    if (int > goal) {
+                        timer(int, name, goal, time, increasing);
+                    }
                 }
             }, time);
         }
 
-        timer(intSince, 'since', 2015, time / 115);
-        timer(intMembers, 'members', 120, time / 120);
-        timer(intProjects, 'projects', 4, time / 4);
+        timer(intSince, 'since', goalSince, time / Math.abs(intSince - goalSince), false);
+        timer(intMembers, 'members', goalMembers, time / Math.abs(intMembers - goalMembers), true);
+        timer(intProjects, 'projects', goalProjects, time / Math.abs(intProjects - goalProjects), true);
     }
 
 

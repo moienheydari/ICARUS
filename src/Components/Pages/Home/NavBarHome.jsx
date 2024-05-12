@@ -10,7 +10,7 @@ export default function NavBarHome() {
 
 
     return (
-        <div className='navbarhom'>
+        <div className='navbarhom' id='navbarhom'>
             <Logo />
             <div className='buttons'>
                 <Link className='button farleft' onClick={handleClickProjects}>Projects</Link>

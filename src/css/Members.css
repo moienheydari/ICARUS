@@ -1,1 +1,1 @@
-.members{height:100vh;overflow:auto}/*# sourceMappingURL=Members.css.map */
+.members{display:flex;flex-direction:column;align-items:center;width:100%;height:100vh;overflow:auto;position:relative}/*# sourceMappingURL=Members.css.map */

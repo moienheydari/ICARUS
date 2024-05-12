@@ -1,12 +1,15 @@
 @import '../partial';
 
 .projectshome {
+    margin-left: 75px;
+    margin-right: 75px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 85%;
-    margin-bottom: 350px;
-    padding-top: 50px;
+
+    margin-bottom: 130px;
+
 
     .expl {
         position: relative;
@@ -119,6 +122,8 @@
 
 @media (max-width: 780px) {
     .projectshome {
+        margin-left: 50px;
+        margin-right: 50px;
         margin-bottom: 200px;
 
         .expl {

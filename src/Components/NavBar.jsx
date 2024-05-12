@@ -14,7 +14,7 @@ export default function NavBar() {
 
 
     return (
-        <div className='navbar'>
+        <div className='navbar' id='navbar'>
             <Logo />
             <div className='buttons'>
                 <div className='farleft' >
@@ -29,7 +29,7 @@ export default function NavBar() {
                     </div>
                 </div>
                 <Link className='button' to={'/Apply'} onClick={() => { handleLinkClick('/Apply') }}>Apply</Link>
-                <Link className='button' to={'/Sponsors'} onClick={() => { handleLinkClick('/Sponsers') }}>Sponsors</Link>
+                <Link className='button' to={'/Sponsors'} onClick={() => { handleLinkClick('/Sponsors') }}>Sponsors</Link>
                 <Link className='button membrs' to={'/Members'} onClick={() => { handleLinkClick('/Members') }}>Members</Link>
             </div>
         </div>

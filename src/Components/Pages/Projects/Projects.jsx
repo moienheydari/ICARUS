@@ -3,6 +3,7 @@ import ProjectDiscription from './ProjectDiscription.jsx';
 import ContactUS from '../../ContactUS.jsx';
 import NavBar from '../../NavBar.jsx';
 import '../../../css/Projects.css';
+import WingLogo from '../../WingLogo.jsx';
 
 export default function Projects({ children, load }) {
 
@@ -14,6 +15,7 @@ export default function Projects({ children, load }) {
 
     return (
         <div className='projects' id='projects'>
+            <WingLogo />
             <NavBar />
             <ProjectDiscription load={load}>{children}</ProjectDiscription>
             <ContactUS />

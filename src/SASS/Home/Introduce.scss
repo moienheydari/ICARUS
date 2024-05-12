@@ -1,12 +1,12 @@
 @import '../partial';
 
 .introduce {
+    margin-left: 75px;
+    margin-right: 75px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 90%;
-    margin-bottom: 250px;
-    margin-bottom: 0px;
 
     .title1 {
         text-align: center;
@@ -51,6 +51,9 @@
 
 @media (max-width: 780px) {
     .introduce {
+        margin-left: 50px;
+        margin-right: 50px;
+
         margin-top: 30px;
         margin-bottom: 0px;
 
