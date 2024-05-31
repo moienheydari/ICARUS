@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '../../../css/MemberPhotos.css';
 import ImageCard from './ImageCard';
-import myImage1 from '../../../Assets/Managers/ACC_MDV_Matteo_Tilocca_matteotilocca04@gmail.com.png';
-import myImage2 from '../../../Assets/Managers/DART_Manager_Matteo_Cafaro_&&&&&&.png';
+import myImage1 from '../../../Assets/Managers/ACC_TeamLeader_Antonella_DeDato_antonella.dedato00@gmail.com.png';
+import myImage2 from '../../../Assets/Managers/DART_ProjectManager_Matteo_Cafaro_matteo.cafaro@polito.it.png';
 import myImage3 from '../../../Assets/Managers/RA_ProjectManagerRA_Stefano_Zappone_stefano.zappone@gmail.com.png';
 import myImage4 from '../../../Assets/Managers/IT_Responsabile_Angelo_Romano_angelodaroma00@gmail.com.png';
 import myImage5 from '../../../Assets/Managers/Communication_SocialMediaManager_Andra_Mihaila_andra.mihaila11@gmail.com.png';
@@ -53,11 +53,11 @@ export default function MemberPhotos() {
         <div className='memberphotos'>
             <div className='memberhead'>
                 <div className='heads' onClick={() => { handleButton('acc') }}>
-                    <ImageCardHead image={myImage1} index={101} name={'ACC_MDV_Matteo_Tilocca_matteotilocca04@gmail.com'} />
+                    <ImageCardHead image={myImage1} index={101} name={'ACC_TeamLeader_Antonella_DeDato_antonella.dedato00@gmail.com'} />
                     <p className='button' onClick={() => { handleButton('acc') }} style={{ background: 'rgba(0, 2, 73, 0.7)' }}>Project Manager of <br />ACC</p>
                 </div>
                 <div className='heads' onClick={() => { handleButton('dart') }}>
-                    <ImageCardHead image={myImage2} index={102} name={'DART_Manager_Matteo_Cafaro_&&&&&&'} />
+                    <ImageCardHead image={myImage2} index={102} name={'DART_ProjectManager_Matteo_Cafaro_matteo.cafaro@polito.it'} />
                     <p className='button' onClick={() => { handleButton('dart') }} style={{ background: 'rgba(0, 2, 73, 0.7)' }}>Project Manager of <br />DART</p>
                 </div>
                 <div className='heads' onClick={() => { handleButton('ra') }}>

@@ -6,7 +6,7 @@ export default function ImageCard({ image, index, name }) {
     const nameContent = name.split('_');
     const moreInfo = {
         'Role': nameContent[1],
-        'Email': nameContent[4]
+        'Email': (nameContent[4] != 'inseriremail') ? nameContent[4] : '*****'
     }
     const moreInfoArray = [];
     for (const key of Object.keys(moreInfo)) {
